@@ -6,3 +6,70 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+    color: white;
+}
+
+html {
+    background-color: white;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    /*background-color: rgb(218, 218, 218);*/  
+    background-position: center; 
+    padding: 2rem;
+}
+
+header {
+    height: 95vh;
+    background-image: linear-gradient(to top left, rgb(126, 213, 111, .7), rgb(40, 180, 133, .7)), url(/img/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-box {
+    position: absolute;
+    top: 2.5rem;
+    left: 2.5rem;
+}
+
+.logo {
+    height: 2rem;
+}
+
+.header-button {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.heading-primary {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+span:nth-of-type(1) {
+    font-size: 2.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2.2rem;
+}
+span:nth-of-type(2) {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.035rem;
+}
+
+
+@media screen and (min-width: 785px)
