@@ -64,12 +64,98 @@ span:nth-of-type(1) {
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 2.2rem;
+    animation: headingSpan1 2s ease-in-out;
+    backface-visibility: hidden;
+    /* hides part behind animation, prevents wiggle in animation */
 }
+
+@keyframes headingSpan1 {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        opacity: .8;
+        transform: translateX(15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+}
+
 span:nth-of-type(2) {
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 1.035rem;
+    animation: headingSpan2 2s ease-in-out;
+    backface-visibility: hidden;
+    /* hides part behind animation, prevents wiggle in animation */
+    
+}
+
+@keyframes headingSpan2 {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        opacity: .8;
+        transform: translateX(-15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.discover-button-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+.discover-button-container .btn-white {
+    transition: all .2s;
+    box-shadow: 0 .75rem 1.25rem rgba(0, 0, 0, .4);
+}
+
+.discover-button-container .btn-white:hover {
+    transform: translateY(-.25rem);
+}
+
+.discover-button-container .btn-white:active {
+    transform: translateY(.125rem);
+}
+
+.btn {
+    border: none;
+    border-radius: 2.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.btn:link, 
+.btn:visited {
+    text-decoration: none;
 }
 
 
-@media screen and (min-width: 785px)
+.btn-white {
+    background-color: #fff;
+    color: #777;
+    padding: 1rem 2.25rem;
+}
+
+
+@media screen and (min-width: 785px) {
+
+
+
+}
