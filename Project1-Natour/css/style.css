@@ -127,8 +127,8 @@ body {
     background-color: #fff; }
 
 .header {
-  display: flex;
   height: 95vh;
+  display: flex;
   background-color: #777;
   background-image: linear-gradient(to top left, rgba(85, 197, 122, 0.7), rgba(40, 180, 133, 0.7)), url(../img/hero.jpg);
   background-size: cover;
@@ -136,15 +136,15 @@ body {
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
 
-.header_logo-box {
+.header__logo-box {
   position: absolute;
   top: 5rem;
-  left: 5rem; }
-  .header_logo-box .header_logo {
-    height: 2rem; }
+  left: 5rem;
+  height: 2rem; }
 
-.header_button-n-text {
-  display: flex;
-  align-self: center;
-  flex-direction: column;
-  margin: auto; }
+.header__logo {
+  height: 2rem; }
+
+.header__button-n-text {
+  margin: auto;
+  align-self: center; }

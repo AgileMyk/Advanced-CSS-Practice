@@ -1,6 +1,6 @@
 .header {
-    display: flex;
     height: 95vh;
+    display: flex;
     background-color: $med-gray;
     background-image: linear-gradient(
         to top left, 
@@ -13,21 +13,19 @@
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   }
 
-  .header_logo-box {
-    position: absolute;
-    top: 5rem;
-    left: 5rem; 
+.header__logo-box {
+  position: absolute;
+  top: 5rem;
+  left: 5rem; 
+  height: 2rem;
+  
+}
 
-    .header_logo {
-      height: 2rem; 
-    }
+.header__logo {
+  height: 2rem; 
+}
 
-  }
-
-    
-  .header_button-n-text {
-    display: flex;
-    align-self: center;
-    flex-direction: column;
-    margin: auto; 
-  }
+.header__button-n-text {
+  margin: auto; 
+  align-self: center;
+}

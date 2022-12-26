@@ -172,7 +172,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "compile:sass":"node-sass sass/main.scss css/style.css"
+    "compile:sass":"node-sass sass/main.scss css/style.css -w"
   },
   "author": "",
   "license": "ISC"
