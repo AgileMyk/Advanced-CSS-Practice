@@ -28,10 +28,11 @@
     transform: translateY(0);
     opacity: 1; } }
 
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
-  line-height: 1.7;
   color: #fff; }
 
 html {
@@ -39,20 +40,15 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: 'Lato', Arial, Helvetica, sans-serif;
-  /*background-color: rgb(218, 218, 218);*/
-  background-position: center;
-  padding: 2rem; }
-
-:root {
-  font-size: 62.5%;
-  font-family: "Lato", Arial, Helvetica, sans-serif; }
-
-html {
-  color: #fff; }
+  box-sizing: border-box; }
 
 body {
-  color: inherit; }
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.7;
+  background-position: center;
+  padding: 2rem; }
 
 .header__button-n-text .heading--primary {
   display: flex;
@@ -131,15 +127,14 @@ body {
     background-color: #fff; }
 
 .header {
+  display: flex;
   height: 95vh;
   background-color: #777;
   background-image: linear-gradient(to top left, rgba(85, 197, 122, 0.7), rgba(40, 180, 133, 0.7)), url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-  display: flex;
-  flex-direction: column; }
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
 
 .header_logo-box {
   position: absolute;
@@ -150,5 +145,6 @@ body {
 
 .header_button-n-text {
   display: flex;
+  align-self: center;
   flex-direction: column;
   margin: auto; }
