@@ -1,0 +1,45 @@
+.btn {
+    border: none;
+    border-radius: 2.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+
+    &::after {
+        content: '';
+        display: inline-block;
+        height: 100%; /*    height/width/border-radius, etc. set to 100% so it matches the element that it is "psuedo'd to"     */
+        width: 100%;
+        border-radius: 2.5rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .225s;
+    }
+
+    &:hover::after {
+        transform: scaleX(1.75) scaleY(1.175);
+        opacity: 0;
+    }
+    
+    /* 
+    .btn::after and .btn:hover::after transition/transform, opacity is used to create the flash effect of hovering over the button
+    */
+    
+    &:link, 
+    &:visited {
+        text-decoration: none;
+    }
+}
+
+.btn--white {
+    transition: all .2s;
+    box-shadow: 0 .75rem 1.25rem $shadow;
+    position: relative;
+    animation: discover_btn 1.25s ease-in .25s backwards;
+    background-color: $white;
+    color: $gray;
+    padding: 1rem 2.25rem;
+}

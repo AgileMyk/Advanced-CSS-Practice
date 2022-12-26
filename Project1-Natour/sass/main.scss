@@ -1,211 +1,28 @@
 /* COLORS */
+@import "abstract/functions";
+@import "abstract/mixins";
+@import "abstract/variables";
 
-$color-primary-light: #55c57a;
-$color-primary: #7ed56f;
-$color-primary-dark: #28b485;
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utility";
+
+@import "components/button";
+
+@import "pages/home";
+
+@import "layout/header";
 
 
-$white: #fff;
-$gray: #777;
-$shadow: rgba(0, 0, 0, .4);
 
-
-* {
-    margin: 0;
-    padding: 0;
-    line-height: 1.7;
-    color: white;
-}
-
-html {
-    background-color: $white;
-    font-size: 62.5%;
-}
-
-body {
-    font-family: 'Lato', Arial, Helvetica, sans-serif;
-    /*background-color: rgb(218, 218, 218);*/  
-    background-position: center; 
-    padding: 2rem;
-}
-
-header {
-    height: 95vh;
-    background-color: $gray;
-    background-image: linear-gradient(
-        to top left, 
-        rgba($color-primary-light, .7), 
-        rgba($color-primary-dark, .7)), 
-        url(../img/hero.jpg); 
-    background-size: cover;
-    background-position: top;
-    position: relative;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    display: flex;
-    flex-direction: column;
-}
-
-.header__logo-box {
-    position: absolute;
-    top: 5rem;
-    left: 5rem;
-}
-
-.header__logo {
-    height: 2rem;
-}
-
-.header--button {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-}
-
-.heading--primary {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: auto;
-}
-
-span:nth-of-type(1) {
-    font-size: 2.5em;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 2.2rem;
-    animation: headingSpan1 2s ease-in-out;
-    backface-visibility: hidden;
-    /* hides part behind animation, prevents wiggle in animation */
-}
-
-@keyframes headingSpan1 {
-    0% {
-        opacity: 0;
-        transform: translateX(-10rem);
-    }
-
-    80% {
-        opacity: .8;
-        transform: translateX(1.5rem);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0rem);
-    }
-
-}
-
-span:nth-of-type(2) {
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 1.035rem;
-    animation: headingSpan2 2s ease-in-out;
-    backface-visibility: hidden;
-    /* hides part behind animation, prevents wiggle in animation */
-    
-}
-
-@keyframes headingSpan2 {
-    0% {
-        opacity: 0;
-        transform: translateX(10rem);
-    }
-
-    80% {
-        opacity: .8;
-        transform: translateX(-1.5rem);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(rem);
-    }
-}
-
-@keyframes discover_btn {
-    0% {
-        transform: translateY(5rem);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.discover-button-container {
-    display: flex;
-    justify-content: center;
-    padding-top: 1rem;
-}
-
-.discover-button-container .btn--white {
-    transition: all .2s;
-    box-shadow: 0 .75rem 1.25rem $shadow;
-    position: relative;
-    animation: discover_btn 1.25s ease-in .25s backwards;
-}
-
-.discover-button-container .btn--animated:hover {
-    transform: translateY(-.25rem);
-}
-
-.discover-button-container .btn--animated:active {
-    transform: translateY(.125rem);
-}
-
-.discover-button-container .btn--animated::after {
-    background-color: $white;
-}
-
-.btn {
-    border: none;
-    border-radius: 2.5rem;
-    font-size: 1.25rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    display: inline-block;
-}
-
-.btn::after {
-    content: '';
-    display: inline-block;
-    height: 100%; /*    height/width/border-radius, etc. set to 100% so it matches the element that it is "psuedo'd to"     */
-    width: 100%;
-    border-radius: 2.5rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .225s;
-}
-
-.btn:hover::after {
-    transform: scaleX(1.75) scaleY(1.175);
-    opacity: 0;
-}
 
 /* 
-.btn::after and .btn:hover::after transition/transform, opacity is used to create the flash effect of hovering over the button
-*/
-
-.btn:link, 
-.btn:visited {
-    text-decoration: none;
-}
-
-
-.btn--white {
-    background-color: $white;
-    color: $gray;
-    padding: 1rem 2.25rem;
-}
-
 
 @media screen and (min-width: 785px) {
 
 
 
 }
+
+*/

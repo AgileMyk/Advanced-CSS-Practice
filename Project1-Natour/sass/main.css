@@ -1,71 +1,4 @@
 /* COLORS */
-* {
-  margin: 0;
-  padding: 0;
-  line-height: 1.7;
-  color: white;
-}
-
-html {
-  background-color: #fff;
-  font-size: 62.5%;
-}
-
-body {
-  font-family: "Lato", Arial, Helvetica, sans-serif;
-  /*background-color: rgb(218, 218, 218);*/
-  background-position: center;
-  padding: 2rem;
-}
-
-header {
-  height: 95vh;
-  background-color: #777;
-  background-image: linear-gradient(to top left, rgba(85, 197, 122, 0.7), rgba(40, 180, 133, 0.7)), url(../img/hero.jpg);
-  background-size: cover;
-  background-position: top;
-  position: relative;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-  display: flex;
-  flex-direction: column;
-}
-
-.header__logo-box {
-  position: absolute;
-  top: 5rem;
-  left: 5rem;
-}
-
-.header__logo {
-  height: 2rem;
-}
-
-.header--button {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-}
-
-.heading--primary {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin: auto;
-}
-
-span:nth-of-type(1) {
-  font-size: 2.5em;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 2.2rem;
-  -webkit-animation: headingSpan1 2s ease-in-out;
-          animation: headingSpan1 2s ease-in-out;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  /* hides part behind animation, prevents wiggle in animation */
-}
-
 @-webkit-keyframes headingSpan1 {
   0% {
     opacity: 0;
@@ -80,7 +13,6 @@ span:nth-of-type(1) {
     transform: translateX(0rem);
   }
 }
-
 @keyframes headingSpan1 {
   0% {
     opacity: 0;
@@ -95,17 +27,6 @@ span:nth-of-type(1) {
     transform: translateX(0rem);
   }
 }
-span:nth-of-type(2) {
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 1.035rem;
-  -webkit-animation: headingSpan2 2s ease-in-out;
-          animation: headingSpan2 2s ease-in-out;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  /* hides part behind animation, prevents wiggle in animation */
-}
-
 @-webkit-keyframes headingSpan2 {
   0% {
     opacity: 0;
@@ -120,7 +41,6 @@ span:nth-of-type(2) {
     transform: translateX(rem);
   }
 }
-
 @keyframes headingSpan2 {
   0% {
     opacity: 0;
@@ -155,30 +75,33 @@ span:nth-of-type(2) {
     opacity: 1;
   }
 }
-.discover-button-container {
-  display: flex;
-  justify-content: center;
-  padding-top: 1rem;
-}
-
-.discover-button-container .btn--white {
-  transition: all 0.2s;
-  box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.4);
-  position: relative;
-  -webkit-animation: discover_btn 1.25s ease-in 0.25s backwards;
-          animation: discover_btn 1.25s ease-in 0.25s backwards;
-}
-
-.discover-button-container .btn--animated:hover {
+.btn--animated:hover {
   transform: translateY(-0.25rem);
 }
-
-.discover-button-container .btn--animated:active {
+.btn--animated:active {
   transform: translateY(0.125rem);
 }
-
-.discover-button-container .btn--animated::after {
+.btn--animated::after {
   background-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+  color: #fff;
+}
+
+html {
+  background-color: #fff;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  /*background-color: rgb(218, 218, 218);*/
+  background-position: center;
+  padding: 2rem;
 }
 
 .btn {
@@ -188,8 +111,10 @@ span:nth-of-type(2) {
   font-weight: 700;
   text-transform: uppercase;
   display: inline-block;
+  /* 
+  .btn::after and .btn:hover::after transition/transform, opacity is used to create the flash effect of hovering over the button
+  */
 }
-
 .btn::after {
   content: "";
   display: inline-block;
@@ -202,22 +127,23 @@ span:nth-of-type(2) {
   z-index: -1;
   transition: all 0.225s;
 }
-
 .btn:hover::after {
   transform: scaleX(1.75) scaleY(1.175);
   opacity: 0;
 }
-
-/* 
-.btn::after and .btn:hover::after transition/transform, opacity is used to create the flash effect of hovering over the button
-*/
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-decoration: none;
 }
 
 .btn--white {
+  transition: all 0.2s;
+  box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.4);
+  position: relative;
+  -webkit-animation: discover_btn 1.25s ease-in 0.25s backwards;
+          animation: discover_btn 1.25s ease-in 0.25s backwards;
   background-color: #fff;
   color: #777;
   padding: 1rem 2.25rem;
-}/*# sourceMappingURL=main.css.map */
+}
+
+@imop;/*# sourceMappingURL=main.css.map */
