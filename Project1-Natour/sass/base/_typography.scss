@@ -1,0 +1,47 @@
+
+body {
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: $white;
+  line-height: 1.7;
+  background-position: center;
+  padding: 2rem;
+}
+
+.header__button-n-text .heading--primary {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto; 
+  }
+
+     .heading--primary span:nth-of-type(1) {
+      font-size: 2.5em;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 2.2rem;
+      animation: headingSpan1 2s ease-in-out;
+      backface-visibility: hidden;
+      /* hides part behind animation, prevents wiggle in animation */ 
+    }
+
+
+     .heading--primary span:nth-of-type(2) {
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 1.035rem;
+      animation: headingSpan2 2s ease-in-out;
+      backface-visibility: hidden;
+      /* hides part behind animation, prevents wiggle in animation */ 
+    }
+
+
+  .discover-button-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem; 
+  }
+
+  .btn-white {
+    color: $med-gray;
+  }

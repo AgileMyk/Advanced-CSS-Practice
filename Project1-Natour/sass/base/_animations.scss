@@ -1,0 +1,37 @@
+ 
+  @keyframes headingSpan1 {
+    0% {
+      opacity: 0;
+      transform: translateX(-10rem); }
+    80% {
+      opacity: .8;
+      transform: translateX(1.5rem); }
+    100% {
+      opacity: 1;
+      transform: translateX(0rem); } 
+    }
+
+     
+  @keyframes headingSpan2 {
+    0% {
+      opacity: 0;
+      transform: translateX(10rem); }
+    80% {
+      opacity: .8;
+      transform: translateX(-1.5rem); }
+    100% {
+      opacity: 1;
+      transform: translateX(rem); } 
+    }
+
+              
+  
+  @keyframes discover_btn {
+    0% {
+      transform: translateY(5rem);
+      opacity: 0; }
+    100% {
+      transform: translateY(0);
+      opacity: 1; } 
+    }
+  
