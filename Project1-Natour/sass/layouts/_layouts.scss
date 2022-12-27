@@ -29,3 +29,153 @@
   margin: auto; 
   align-self: center;
 }
+
+.body-grid {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  margin-bottom: 2rem;
+ grid-template-columns:
+ [left-start]1fr[two-start]1fr[three-start]1fr[four-start]1fr[five-start]1fr[six-start]1fr[very-center]1fr[eight-start]1fr[nine-start]1fr[ten-start]1fr[eleven-start]1fr[tweele-start]1fr[right-end]
+ ;
+  grid-template-rows: repeat(6, 85vh);
+  gap: 2vw;
+  
+  .div {
+
+    border: 1px solid silver;
+  
+    &:nth-of-type(1) {
+     background-color: $white;
+     grid-column-start: left-start;
+     grid-column-end: very-center;
+     grid-row-start: 1;
+     grid-row-end: 2;
+    }
+    
+    &:nth-of-type(2) {
+      background-color: $white;   
+      grid-column-start: 7;
+      grid-column-end: right-end;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      
+    }
+    
+      &:nth-of-type(3) {
+      background-color: $white;
+      grid-column-start: left-start;
+      grid-column-end: 5;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      
+    }
+    
+      &:nth-of-type(4) {
+      background-color: $white;
+      grid-column-start: 5;
+     grid-column-end: 9;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      
+    }
+    
+      &:nth-of-type(5) {
+      background-color: $white;   
+      grid-column-start: 9;
+      grid-column-end: right-end;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      
+    }
+    
+     &:nth-of-type(6) {
+      background-color: $white;
+      grid-column-start: left-start;
+      grid-column-end: 4;
+      grid-row-start: 3;
+      grid-row-end: 4;
+      
+    }
+  
+    &:nth-of-type(7) {
+      background-color: $white;
+      grid-column-start: 4;
+      grid-column-end: right-end;
+      grid-row-start: 3;
+      grid-row-end: 4;
+      
+    }
+    
+     &:nth-of-type(8) {
+      background-color: $white;
+      grid-column-start: left-start;
+      grid-column-end: 4;
+      grid-row-start: 4;
+      grid-row-end: 5;
+    }
+     &:nth-of-type(9) {
+       background-color: $white;
+       grid-column-start: 4;
+       grid-column-end: very-center;
+       grid-row-start: 4;
+       grid-row-end: 5;
+    }
+     &:nth-of-type(10) {
+      background-color: $white;
+      grid-column-start: very-center;
+      grid-column-end: 10;
+      grid-row-start: 4;
+      grid-row-end: 5;
+    }
+     &:nth-of-type(11) {
+      background-color: $white;
+      grid-column-start: 10;
+      grid-column-end: right-end;
+      grid-row-start: 4;
+      grid-row-end: 5;
+    }
+    
+     &:nth-of-type(12) {
+      background-color: $white;
+      grid-column-start: left-start;
+      grid-column-end: 4;
+      grid-row-start: 5;
+      grid-row-end: 6;
+    }
+    
+     &:nth-of-type(13) {
+      background-color: $white;
+      grid-column-start: 4;
+      grid-column-end: 7;
+      grid-row-start: 5;
+      grid-row-end: 6;
+    }
+  
+    &:nth-of-type(14) {
+      background-color: $white;
+      grid-column-start: 7;
+      grid-column-end: right-end;
+      grid-row-start: 5;
+      grid-row-end: 6;
+    } 
+    
+    &:nth-of-type(15) {
+      background-color: $white;
+      grid-column-start: left-start;
+      grid-column-end: 4;
+      grid-row-start: 6;
+      grid-row-end: 7;
+    }
+    
+    &:nth-of-type(16) {
+      background-color: $white;
+      grid-column-start: 4;
+      grid-column-end: right-end;
+      grid-row-start: 6;
+      grid-row-end: 7;
+    }
+   
+  }
+  
+}
