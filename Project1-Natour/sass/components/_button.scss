@@ -37,6 +37,12 @@
     }
 
     &--white {
+      border: none;
+      border-radius: 2.5rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      display: inline-block;
       transition: all .2s;
       box-shadow: 0 0.75rem 1.25rem $shadow;
       position: relative;
@@ -61,3 +67,35 @@
   
   }
 
+  .btn-about {
+
+    margin-top: $small;
+
+    &:link,
+    &:visited {
+      color: $color-primary-dark;
+      display: inline-block;
+      text-decoration: none;
+      border-bottom: 1px solid $color-primary-dark;
+      padding: .5rem 1.5rem;
+      transition: all 1s;
+    }
+
+    &:hover {
+      font-size: $default-font-size;
+      color: $white;
+      box-shadow: 0 1rem 2rem $shadow;
+      background-color: $color-primary-dark;
+      border-bottom: 1px solid $white;
+      transform: scaleY(-2px);
+    }
+
+    &:active {
+      box-shadow: 0 .5rem 1rem $shadow;
+      transform: scaleY(0px);
+      transition: all .25s;
+
+      
+    }
+
+  }

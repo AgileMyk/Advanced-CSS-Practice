@@ -65,3 +65,18 @@ body {
       text-shadow: .5rem 1rem 2rem $shadow;
     }
   }
+
+  .tertiary-heading {
+    font-size: $default-font-size;
+    font-weight: 700;
+    text-transform: uppercase
+  }
+
+  .para {
+    font-size: $default-font-size;
+
+    &:not(:last-of-type) {
+      margin-bottom: 3rem;
+    }
+
+  }

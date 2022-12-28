@@ -96,11 +96,24 @@ body {
     transform: skewY(6deg) skewX(12deg) scale(1.2);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.4); }
 
+.tertiary-heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.para {
+  font-size: 1.6rem; }
+  .para:not(:last-of-type) {
+    margin-bottom: 3rem; }
+
 .u-center-text {
   text-align: center; }
 
-.u-margin-bottom-8 {
+.u-margin-bottom-big {
   margin-bottom: 8rem; }
+
+.u-h3-margin-bottom-small {
+  margin-bottom: 1.5rem; }
 
 .btn {
   border: none;
@@ -133,6 +146,12 @@ body {
   .btn:link, .btn:visited {
     text-decoration: none; }
   .btn--white {
+    border: none;
+    border-radius: 2.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
     transition: all .2s;
     box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.4);
     position: relative;
@@ -146,6 +165,27 @@ body {
     transform: translateY(0.125rem); }
   .btn--animated::after {
     background-color: #fff; }
+
+.btn-about {
+  margin-top: 2rem; }
+  .btn-about:link, .btn-about:visited {
+    color: #28b485;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid #28b485;
+    padding: .5rem 1.5rem;
+    transition: all 1s; }
+  .btn-about:hover {
+    font-size: 1.6rem;
+    color: #fff;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+    background-color: #28b485;
+    border-bottom: 1px solid #fff;
+    transform: scaleY(-2px); }
+  .btn-about:active {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+    transform: scaleY(0px);
+    transition: all .25s; }
 
 .header {
   height: 95vh;
@@ -278,7 +318,7 @@ body {
 
 .section-about {
   background-color: #f7f7f7;
-  padding: 25rem 0;
+  padding: 19rem 15rem;
   margin-top: -20vh;
   clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%); }
   .section-about .grid_1 {
