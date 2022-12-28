@@ -4,6 +4,7 @@ $color-primary-light: rgb(85, 197, 122);
 $color-primary-dark: rgb(40, 180, 133);
 
 $white: #fff;
+$color-gray-light-1: #f7f7f7;
 $med-gray: #777;
 $shadow: rgba(0, 0, 0, 0.4);
 
@@ -12,3 +13,7 @@ $shadow: rgba(0, 0, 0, 0.4);
 $grid-width: 114rem;
 $gutter-vertical: 8rem;
 $gutter-horizontal: 6rem;
+
+// Div angle
+
+$sub-header_div-angle: polygon(0 15%, 100% 0, 100% 85%, 0 100%);

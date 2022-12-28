@@ -2,7 +2,6 @@
 body {
   font-family: 'Lato', Arial, Helvetica, sans-serif;
   font-weight: 400;
-  color: $white;
   line-height: 1.7;
   background-position: center;
   padding: 2rem;
@@ -13,6 +12,7 @@ body {
     align-items: center;
     flex-direction: column;
     margin: auto; 
+    color: $white;
   }
 
      .heading--primary span:nth-of-type(1) {
@@ -44,4 +44,24 @@ body {
 
   .btn-white {
     color: $med-gray;
+  }
+
+  .heading-secondary {
+    display: inline-block;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    display: inline-block;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: all 2s;
+    letter-spacing: .2rem;
+
+    
+    &:hover {
+      transform: skewY(6deg) skewX(12deg) scale(1.2);
+      text-shadow: .5rem 1rem 2rem $shadow;
+    }
   }
