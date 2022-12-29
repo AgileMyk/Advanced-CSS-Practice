@@ -8,8 +8,36 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 1fr;
-
+        gap: 3rem;
     }
 
 }
+
+.features {
+    justify-content: space-evenly;
+    background-image: linear-gradient(
+      to top left, 
+      rgba($color-primary-light, 0.7), 
+      rgba($color-primary-dark, 0.7)), 
+      url(../img/nat-4.jpg);
+    background-size: cover;
+    background-position: left;
+    gap: 2rem;
+    padding: 0 4rem;
+    transform: skewY(-9deg);
+    margin-top: -11rem;
+  }
+
+  // features section
+
+  .row {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 16rem 6rem;
+    gap: 4rem;
+
+    & > * {
+      transform: skewY(9deg);
+    } 
+  }
 

@@ -115,6 +115,9 @@ body {
 .u-h3-margin-bottom-small {
   margin-bottom: 1.5rem; }
 
+.heading-tertiary {
+  text-transform: uppercase; }
+
 .btn {
   border: none;
   border-radius: 2.5rem;
@@ -214,6 +217,25 @@ body {
     .composition__photo:not(:hover) {
       transform: scale(0.925);
       z-index: 2; }
+
+.feature-box {
+  width: 21rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 1.5rem 20rem rgba(0, 0, 0, 0.4);
+  font-size: 1rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 4px;
+  transition: transform .6s; }
+  .feature-box:hover {
+    transform: translateY(-2rem) scale(1.075) skewY(9deg); }
+  .feature-box__icon {
+    font-size: 6rem;
+    display: inline-block;
+    background-image: linear-gradient(to right, #55c57a, #28b485);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; }
 
 .header {
   height: 95vh;
@@ -352,4 +374,23 @@ body {
   .section-about .grid_1 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr; }
+    grid-template-rows: 1fr;
+    gap: 3rem; }
+
+.features {
+  justify-content: space-evenly;
+  background-image: linear-gradient(to top left, rgba(85, 197, 122, 0.7), rgba(40, 180, 133, 0.7)), url(../img/nat-4.jpg);
+  background-size: cover;
+  background-position: left;
+  gap: 2rem;
+  padding: 0 4rem;
+  transform: skewY(-9deg);
+  margin-top: -11rem; }
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 16rem 6rem;
+  gap: 4rem; }
+  .row > * {
+    transform: skewY(9deg); }
