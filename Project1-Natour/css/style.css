@@ -383,7 +383,7 @@ body {
   background-size: cover;
   background-position: left;
   gap: 2rem;
-  padding: 0 4rem;
+  padding: 12rem 0 15rem;
   transform: skewY(-9deg);
   margin-top: -11rem; }
 
@@ -394,3 +394,23 @@ body {
   gap: 4rem; }
   .row > * {
     transform: skewY(9deg); }
+
+.section-tours {
+  background-color: #f7f7f7;
+  padding: 5rem 15rem;
+  margin-top: -12rem;
+  transform: skewY(-9deg);
+  text-align: center; }
+  .section-tours > * {
+    transform: skewY(9deg); }
+  .section-tours .heading-tertiary {
+    background-image: linear-gradient(to top left, rgba(85, 197, 122, 0.7), rgba(40, 180, 133, 0.7));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 3em; }
+  .section-tours .grid-2 {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 5rem; }
