@@ -26,19 +26,25 @@
     padding: 12rem 0 15rem;
     transform: skewY(-9deg);
     margin-top: -11rem;
+
+    & > * {
+      transform: skewY(9deg);
+    }
+    
+    & .row {
+      display: flex;
+      justify-content: space-between;
+    }
+
   }
 
   // features section
 
   .row {
-    display: flex;
-    justify-content: space-evenly;
+
     padding: 16rem 6rem;
     gap: 4rem;
 
-    & > * {
-      transform: skewY(9deg);
-    } 
   }
 
 .section-tours {
@@ -78,4 +84,11 @@
     perspective: 150rem;
     -moz-perspective: 150rem;
   }
+}
+
+.section-stories {
+  padding: 15rem 0 0 7.5rem;
+  background-color: $color-gray-light-1;
+  margin: 0 auto;
+  margin-top: -7.5rem;
 }
