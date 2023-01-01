@@ -48,7 +48,13 @@
   transform: skewY(-9deg);
   text-align: center;
 
+  position: relative;
+
   & > * {
+    transform: skewY(9deg);
+  }
+
+  & .btn-green {
     transform: skewY(9deg);
   }
 
@@ -66,6 +72,10 @@
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
     margin-top: $med;
+    // this perspective is for .card (first 3)
+    perspective: 150rem;
+    -moz-perspective: 150rem;
   }
 }

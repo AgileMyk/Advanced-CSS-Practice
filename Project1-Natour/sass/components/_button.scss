@@ -52,6 +52,21 @@
       padding: 1rem 2.25rem; 
     }
 
+    &--green {
+      background-color: $color-primary-light;
+      border: none;
+      margin: 0 auto;
+      border-radius: 2.5rem;
+      font-size: 1.25rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      display: inline-block;
+      transform: skewY(9deg);
+      padding: 1.5rem 3rem; 
+      box-shadow: 1rem .5rem 2rem $shadow;
+      margin-top: 3.5rem;
+    }
+
     &--animated:hover {
       transform: translateY(-0.25rem); 
     }

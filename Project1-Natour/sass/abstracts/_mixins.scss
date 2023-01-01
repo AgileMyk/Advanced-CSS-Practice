@@ -5,3 +5,10 @@
         clear: both;
     }
 }
+
+    //card design
+
+@mixin rounded-image {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}

@@ -1,4 +1,4 @@
-// Colors
+// COLORS
 
 $color-primary-light: rgb(85, 197, 122);
 $color-primary-dark: rgb(40, 180, 133);
@@ -7,6 +7,18 @@ $white: #fff;
 $color-gray-light-1: #f7f7f7;
 $med-gray: #777;
 $shadow: rgba(0, 0, 0, 0.4);
+
+    // card colors
+
+    $card-1-front-primary: #ffb900;
+    $card-1-back-primary: orangered;
+
+    $card-2-front-primary: $color-primary-light;
+    $card-2-back-primary: $color-primary-light;
+
+    $card-3-front-primary: rgb(62, 86, 218);
+    $card-3-back-primary: rgb(131, 182, 204);
+
 
 // Font sizes
 
@@ -20,8 +32,9 @@ $gutter-horizontal: 6rem;
 
 // various number measurements
 
+$mini: 5%;
 $small: 2rem;
-$med: 5rem;
+$med: 4rem;
 $large: 8rem;
 
 // Div angle
@@ -29,3 +42,6 @@ $large: 8rem;
 $sub-header_div-angle: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
 
 // special images
+
+$shared-border-radius--small: 4px;
+

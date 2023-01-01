@@ -1,8 +1,338 @@
+//FUNCTIONALITY
 .card {
-    background-color: orangered;
     height: 50rem;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
 
-    &_1 {
-        background-color: orangered;
+    &__side {
+        height: 100%;
+        transition: all .9s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border-radius: $shared-border-radius--small;
+        box-shadow: 0rem 1rem 3rem $shadow;
+        backface-visibility: hidden;
+
+        &--front {
+            //FRONT SIDE STYLING
+            .card__picture {
+                background-size: cover;
+                position: relative;
+
+                &--1 {
+                    background-image: linear-gradient(to left bottom, $card-1-front-primary, $card-1-back-primary), url(../img/nat-5.jpg);
+                    background-blend-mode: screen;
+                    @include rounded-image;
+                    overflow: hidden;
+                    height: 45%;
+                    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+                    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+                    
+                }
+
+                &--2 {
+                    background-image: linear-gradient(to left bottom, $color-primary-light, $color-primary-dark), url(../img/nat-6.jpg);
+                    border-radius: $shared-border-radius--small;
+                    background-blend-mode: screen;
+                    @include rounded-image;
+                    overflow: hidden;
+                    height: 45%;
+                    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+                    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+                    
+                }
+                                
+                &--3 {
+                    background-image: linear-gradient(to left bottom, $card-3-front-primary, $card-3-back-primary), url(../img/nat-7.jpg);
+                    border-radius: $shared-border-radius--small;
+                    background-blend-mode: screen;
+                    @include rounded-image;
+                    overflow: hidden;
+                    height: 45%;
+                    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+                    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+                    
+                }   
+
+                }
+
+            }
+
+
+        &--back {
+            transform: rotateY(-180deg);
+
+            &-1 {
+                background-image: linear-gradient(to left bottom, $card-1-front-primary, $card-1-back-primary);
+
+            }
+
+            &-2 {
+                background-image: linear-gradient(to left bottom, $card-2-front-primary, $card-2-back-primary);
+
+            }
+
+            &-3 {
+                background-image: linear-gradient(to left bottom, $card-3-front-primary, $card-3-back-primary);
+
+            }
+
+            
+        }
+
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0deg);
+    }
+
+    &__heading {
+
+        font-size: 2.8rem;
+        color: $white;
+        font-weight: 300;
+        text-transform: uppercase;
+        position: absolute;
+        text-align: left;
+        top: 12rem;
+        right: $small;
+        width: 85%;
+
+    }
+
+
+
+    &__heading-span--1 {
+        background-image: linear-gradient(to left bottom,
+         rgba($card-1-front-primary, .8),
+          rgba($card-1-back-primary, .8));
+        padding: 1.2rem .95rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+
+    }
+
+    &__details {
+
+        
+
+        ul {
+            list-style: none;
+            height: 100%;
+            margin: $med auto;
+            width: 80%;
+            
+            li {
+
+                line-height: $small;
+
+                a {
+                    text-decoration: none;
+                    color: $med-gray;
+                    font-size: 1.25rem;
+                    padding-bottom: 1rem;
+                    display: block;
+
+                    &:not(last-of-type) {
+                        margin: 1rem $mini;
+                        border-bottom: 1.25px solid rgb(192, 196, 201);
+                    }
+                }
+
+            }
+        }
+    }
+
+    &__cta {
+        color: $white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        > .btn--white,
+          .btn--animated
+        {
+            box-shadow: none;  
+            animation: none;
+            z-index: 0;
+
+        }
+    }
+
+    &__price {
+        
+
+        &-only {
+            font-size: 2.25rem;
+            font-weight: 400;
+            text-transform: uppercase;
+
+        }
+
+        &-value {
+            font-size: 4.5rem;
+            font-weight: 300;
+            margin: 2.5rem 0 $med;
+            
+        }
+    }
+
+    &__heading-span--2 {
+        background-image: linear-gradient(to left bottom, rgba($card-2-front-primary, .8), rgba($card-2-back-primary, .8));
+        padding: 1.2rem .95rem;
+
+    }
+
+    &__details {
+
+        
+
+        ul {
+            list-style: none;
+            height: 100%;
+            margin: $med auto;
+            width: 80%;
+            
+            li {
+
+                line-height: $small;
+
+                a {
+                    text-decoration: none;
+                    color: $med-gray;
+                    font-size: 1.25rem;
+                    padding-bottom: 1rem;
+                    display: block;
+
+                    &:not(last-of-type) {
+                        margin: 1rem $mini;
+                        border-bottom: 1.25px solid rgb(192, 196, 201);
+                    }
+                }
+
+            }
+        }
+    }
+
+    &__cta {
+        color: $white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        > .btn--white,
+          .btn--animated
+        {
+            box-shadow: none;  
+            animation: none;
+            z-index: 0;
+
+        }
+    }
+
+    &__price {
+        
+
+        &-only {
+            font-size: 2.25rem;
+            font-weight: 400;
+            text-transform: uppercase;
+
+        }
+
+        &-value {
+            font-size: 4.5rem;
+            font-weight: 300;
+            margin: 2.5rem 0 $med;
+            
+        }
+    }
+
+    &__heading-span--3 {
+        background-image: linear-gradient(to left bottom, rgba($card-3-front-primary, .8), rgba($card-3-back-primary, .8));
+        padding: 1.2rem .95rem;
+
+    }
+
+    &__details {
+
+        
+
+        ul {
+            list-style: none;
+            height: 100%;
+            margin: $med auto;
+            width: 80%;
+            
+            li {
+
+                line-height: $small;
+
+                a {
+                    text-decoration: none;
+                    color: $med-gray;
+                    font-size: 1.25rem;
+                    padding-bottom: 1rem;
+                    display: block;
+
+                    &:not(last-of-type) {
+                        margin: 1rem $mini;
+                        border-bottom: 1.25px solid rgb(192, 196, 201);
+                    }
+                }
+
+            }
+        }
+    }
+
+    &__cta {
+        color: $white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        > .btn--white,
+          .btn--animated
+        {
+            box-shadow: none;  
+            animation: none;
+            z-index: 0;
+
+        }
+    }
+
+    &__price {
+        
+
+        &-only {
+            font-size: 2.25rem;
+            font-weight: 400;
+            text-transform: uppercase;
+
+        }
+
+        &-value {
+            font-size: 4.5rem;
+            font-weight: 300;
+            margin: 2.5rem 0 $med;
+            
+        }
     }
 }
+    
+
+    
+    
+
+
+
