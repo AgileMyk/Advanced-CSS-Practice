@@ -6,6 +6,7 @@ $color-primary-dark: rgb(40, 180, 133);
 $white: #fff;
 $color-gray-light-1: #f7f7f7;
 $med-gray: #777;
+$dark-gray: #555;
 $shadow: rgba(0, 0, 0, 0.4);
 
     // card colors
@@ -33,6 +34,7 @@ $gutter-horizontal: 6rem;
 // various number measurements
 
 $mini: 5%;
+$general-size: 1.5rem;
 $small: 2rem;
 $med: 4rem;
 $large: 8rem;
@@ -42,6 +44,8 @@ $large: 8rem;
 $sub-header_div-angle: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
 
 // special images
+
+$border-radius--small: 3px;
 
 $shared-border-radius--small: 4px;
 

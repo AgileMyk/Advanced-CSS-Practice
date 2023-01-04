@@ -1,0 +1,39 @@
+.footer {
+    margin-top: -17.5rem;
+    padding: 30rem;
+    background-color: $dark-gray;
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+    z-index: 5;
+  
+    &__list {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      width: 50%;
+    }
+  
+    &__link {
+      color: $white;text-decoration: none;
+      font-size: $small;
+    }
+  
+    &__text {
+      width: 50%;
+    }
+  
+    &__copyright {
+      color: $white;
+      font-size: 1.5rem;
+  
+      a {
+        text-decoration: none;
+        color: $color-primary-light;
+      }
+  
+      span {
+        font-style: italic;
+        font-weight: 800;
+      }
+  
+    }
+  }

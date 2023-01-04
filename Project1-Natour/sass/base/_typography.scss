@@ -66,6 +66,15 @@ body {
     }
   }
 
+  .heading-non-animated {
+    transition: none;
+
+    &:hover {
+      transform: none;
+      text-shadow: none;
+    }
+  }
+
   .tertiary-heading {
     font-size: $default-font-size;
     font-weight: 700;

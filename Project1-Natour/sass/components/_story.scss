@@ -3,11 +3,14 @@
     margin: 0 auto;
     box-shadow: 0 3rem 6rem $shadow;
     background-color: $white;
-    border-radius: 3px;
+    border-radius: border-radius--small;
     padding: 6rem;
     padding-left: 9rem;
-    font-size: calc($small * .75);
+    font-size: 1.5rem;
     transform: skewX(-12deg);
+    background-color: rgba($white, .6);
+
+   
 
     &__shape {
         width: 15rem;
@@ -20,7 +23,6 @@
         clip-path: circle(47% at 47% 50%);
         transform: translateX(-3rem);
         position: relative;
-        text-align: center;
     }
 
     & > * {
