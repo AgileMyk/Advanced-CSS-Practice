@@ -10,6 +10,25 @@
     <link rel="stylesheet" href="icon-font.css">
 </head>
 <body>
+    <div class="navigation">
+        <input type="checkbox" id="navi-toggle" class="navigation__checkbox">
+
+        <label for="navi-toggle" class="navigation__button">MENU</label>
+
+        <div class="navigation__background">
+            &nbsp;
+        </div>
+
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="#" class="navigation__link">About Natours</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Your benefits</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Popular tours</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Stories</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Book now</a></li>
+            </ul>
+        </nav>
+    </div>
     <header class="header">
         <div class="header__logo-box">
             <img src="/img/logo-white.png" alt="Main Site Logo" class="header__logo">
@@ -318,7 +337,7 @@
     </main>
     <footer class="footer">
         <div class="footer__logo-box">
-            <img src="img/logo-green-2x.png" alt="company logo">
+            <img src="img/logo-green-2x.png" class="footer__img" alt="company logo">
         </div>
         <div class="footer__text-box">
             <div class="footer__text-navigation">
@@ -331,10 +350,12 @@
                 </ul>
             </div>
         </div>
-        <div class="footer__copyright">
-            <p>
-                Site creation led by <a href="#">Jonas Schmedtmann</a> for his online course <span>Advanced CSS and SASS</span>. Copyright &copy; by Jonas Schmedtmann. 
-            </p>
+        <div class="footer__text-box">
+            <div class="footer__copyright">
+                <p>
+                    Site creation led by <a href="#">Jonas Schmedtmann</a> for his online course <span>Advanced CSS and SASS</span>. Copyright &copy; by Jonas Schmedtmann. 
+                </p>
+            </div>
         </div>
     </footer>
 </body>
