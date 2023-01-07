@@ -12,3 +12,10 @@
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
 }
+
+@mixin center-hori-vert {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+}

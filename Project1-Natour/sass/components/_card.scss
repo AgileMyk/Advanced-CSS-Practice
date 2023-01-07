@@ -155,8 +155,8 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
-
+        @include center-hori-vert;
+        
         > .btn--white,
           .btn--animated
         {
@@ -227,7 +227,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        @include center-hori-vert;
 
         > .btn--white,
           .btn--animated
@@ -299,7 +299,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        @include center-hori-vert;
 
         > .btn--white,
           .btn--animated
