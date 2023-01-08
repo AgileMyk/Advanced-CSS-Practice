@@ -1,0 +1,66 @@
+.popup {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: rgba($very-dark-gray, .8);
+    top: 0;
+    left: 0;
+    z-index: 99999;
+
+    &__content {
+        margin: 0 auto;
+        background-color: $white;
+        box-shadow: 0 2rem 4rem $shadow;
+        width: 65%;
+        border-radius: 5px;
+        display: table;
+        overflow: hidden;
+
+        &--images {
+            width: 33.333333%;
+            display: table-cell;
+            vertical-align: middle;          
+
+            &-one {
+                display: block;
+                width: 100%;
+                }
+
+            &-two {
+                display: block;
+                width: 100%;
+            }
+
+        }
+
+        &--text {
+            width: 66.666667%;
+            display: table-cell;
+            vertical-align: middle;
+            padding: 3rem;
+            padding-left: 5rem;
+            text-align: left;
+            font-size: $default-font-size;
+
+            &-p {
+                -moz-column-count: 2;
+                -moz-column-gap: 2rem;              
+                -ms-column-count: 2;
+                -ms-column-gap: 2rem;                
+                -webkit-column-count: 2;
+                -webkit-column-gap: 2rem;
+                column-count: 2;
+                column-gap: 2rem;
+
+                -moz-hyphens: auto;
+                -ms-hyphens: auto;
+                -webkit-hyphens: auto;
+                hyphens: auto;
+            }
+
+        }
+
+    }
+
+
+}

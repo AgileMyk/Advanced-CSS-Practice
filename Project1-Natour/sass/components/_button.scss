@@ -73,6 +73,23 @@
       box-shadow: 1rem .5rem 2rem $shadow;
       margin-top: 3.5rem;
       z-index: 1;
+
+
+      &--popup {
+        background-color: $color-primary-light;
+        border: none;
+        margin: 0 auto;
+        border-radius: 2.5rem;
+        font-size: 1.25rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        display: inline-block;
+        padding: $general-size 3rem; 
+        box-shadow: 1rem .5rem 2rem $shadow;
+        margin-top: 3.5rem;
+        z-index: 1;
+      }
+
     }
 
     &--animated:hover {
@@ -85,6 +102,19 @@
       
     &--animated::after {
       background-color: $white;
+
+    }
+
+    &--animated--popup:hover {
+      transform: translateY(-0.25rem); 
+    }
+
+    &--animated--popup:active {
+      transform: translateY(0.125rem); 
+    }
+      
+    &--animated--popup::after {
+      background-color: $dark-gray;
 
     }
     
