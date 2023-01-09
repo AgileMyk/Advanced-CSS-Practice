@@ -103,7 +103,7 @@ body {
     text-shadow: none; }
 
 .heading-tertiary {
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 700;
   text-transform: uppercase; }
 
@@ -457,7 +457,7 @@ body {
   margin-left: 5rem;
   height: 75%; }
   .composition__photo {
-    width: 65%;
+    width: 45%;
     box-shadow: 0 1.5rem 6rem rgba(3, 2, 2, 0.4);
     border-radius: 4px;
     position: absolute;
@@ -466,7 +466,7 @@ body {
       top: -2rem;
       left: 0; }
     .composition__photo--p2 {
-      top: 15%;
+      top: 25%;
       left: 17.5%; }
     .composition__photo--p3 {
       top: 5%;
@@ -828,6 +828,7 @@ body {
 .header {
   height: 95vh;
   display: flex;
+  padding-bottom: 10rem;
   background-color: #777;
   background-image: linear-gradient(to top left, rgba(85, 197, 122, 0.7), rgba(40, 180, 133, 0.7)), url(../img/hero.jpg);
   background-size: cover;
@@ -891,15 +892,16 @@ body {
 .section-about {
   background-color: #f7f7f7;
   padding: 15rem 15rem;
-  margin-top: -20vh;
-  transform: skewY(-9deg); }
+  padding-bottom: 25rem;
+  margin-top: -15vh;
+  transform: skewY(-6deg); }
   .section-about > * {
-    transform: skewY(9deg); }
+    transform: skewY(6deg); }
   .section-about .grid_1 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
-    gap: 3rem; }
+    gap: 10rem; }
 
 .features {
   justify-content: space-evenly;
@@ -909,9 +911,9 @@ body {
   gap: 2rem;
   padding: 15rem 0 15rem;
   margin-top: -7.5rem;
-  transform: skewY(-9deg); }
+  transform: skewY(-6deg); }
   .features > * {
-    transform: skewY(9deg); }
+    transform: skewY(6deg); }
   .features .row {
     display: flex;
     justify-content: space-between; }
@@ -925,14 +927,14 @@ body {
 
 .section-tours {
   background-color: #f7f7f7;
-  transform: skewY(-9deg);
+  transform: skewY(-6deg);
   text-align: center;
   padding: 12.5rem;
   position: relative; }
   .section-tours > * {
-    transform: skewY(9deg); }
+    transform: skewY(6deg); }
   .section-tours .btn-green {
-    transform: skewY(9deg); }
+    transform: skewY(6deg); }
   .section-tours .heading-tertiary {
     background-image: linear-gradient(to top left, rgba(85, 197, 122, 0.7), rgba(40, 180, 133, 0.7));
     background-clip: text;
@@ -958,10 +960,10 @@ body {
 .section-book {
   padding: 15rem 0;
   background-image: linear-gradient(to right bottom, #55c57a, #28b485);
-  transform: skewY(-9deg);
+  transform: skewY(-6deg);
   margin-top: -8.5rem; }
   .section-book > * {
-    transform: skewY(9deg); }
+    transform: skewY(6deg); }
 
 .book {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 50%, transparent 50%), url(../img/nat-10.jpg);

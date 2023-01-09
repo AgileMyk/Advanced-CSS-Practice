@@ -3,18 +3,19 @@
 .section-about {
     background-color: $color-gray-light-1;
     padding: 15rem 15rem;
-    margin-top: -20vh;
-    transform: skewY(-9deg);
+    padding-bottom: 25rem;
+    margin-top: -15vh;
+    transform: skewY(-6deg);
 
     & > * {
-      transform: skewY(9deg);
+      transform: skewY(6deg);
     }
 
     .grid_1 {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 1fr;
-        gap: 3rem;
+        gap: 10rem;
     }
 
 }
@@ -31,10 +32,10 @@
     gap: 2rem;
     padding: 15rem 0 15rem;
     margin-top: -7.5rem;
-    transform: skewY(-9deg);
+    transform: skewY(-6deg);
 
     & > * {
-      transform: skewY(9deg);
+      transform: skewY(6deg);
     }
     
     & .row {
@@ -59,18 +60,18 @@
 
 .section-tours {
   background-color: $color-gray-light-1;
-  transform: skewY(-9deg);
+  transform: skewY(-6deg);
   text-align: center;
   padding: 12.5rem;
 
   position: relative;
 
   & > * {
-    transform: skewY(9deg);
+    transform: skewY(6deg);
   }
 
   & .btn-green {
-    transform: skewY(9deg);
+    transform: skewY(6deg);
   }
 
   .heading-tertiary {
@@ -107,11 +108,11 @@
 .section-book {
   padding: 15rem 0;
   background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
-  transform: skewY(-9deg);
+  transform: skewY(-6deg);
   margin-top: -8.5rem;
 
   & > * {
-    transform: skewY(9deg);
+    transform: skewY(6deg);
   }
 }
 
