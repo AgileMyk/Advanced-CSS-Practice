@@ -45,7 +45,7 @@
             </h1>
 
             <div class="discover-button-container">
-                <a href="#">
+                <a href="#section-tours">
                     <button class="btn btn--white btn--animated">
                         Discover our tours
                     </button>
@@ -139,7 +139,7 @@
                 </div>
             </div>
         </section>
-        <section class="section-tours">
+        <section class="section-tours" id="section-tours">
             <h3 class="heading-tertiary u-h3-margin-bottom-small ">
                 Most popular tours
             </h3>
@@ -175,7 +175,7 @@
                                     297!
                                 </p>
                             </div>
-                            <a href="#" class="btn btn--white btn--animated">book now!</a>
+                            <a href="#popup" class="btn btn--white btn--animated">book now!</a>
                         </div>
                     </div>
                </div>
@@ -210,7 +210,7 @@
                                     497!
                                 </p>
                             </div>
-                            <a href="#" class="btn btn--white btn--animated">book now!</a>
+                            <a href="#popup" class="btn btn--white btn--animated">book now!</a>
                         </div>
                     </div>                    
                 </div>
@@ -247,7 +247,7 @@
                                     897!
                                 </p>
                             </div>
-                            <a href="#" class="btn btn--white btn--animated">book now!</a>
+                            <a href="#popup" class="btn btn--white btn--animated">book now!</a>
                         </div>
                     </div>
                </div>
@@ -364,7 +364,7 @@
     </footer>
 
     <!--POP UP-->
-    <div class="popup">
+    <div class="popup" id="popup">
         <div class="popup__content">
 
             <div class="popup__content--images">
@@ -377,6 +377,9 @@
 
             <div class="popup__content--text">
 
+                <a href="#section-tours"><button class="popup__close">&times;</button></a>
+
+                
                 <h2 class="heading-secondary u-margin-bottom-med">
                     Start Booking Now
                 </h2>
@@ -402,6 +405,7 @@
             </div>
 
         </div>
+
     </div>
 </body>
 </html>

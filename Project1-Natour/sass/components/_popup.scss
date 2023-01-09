@@ -2,19 +2,26 @@
     height: 100vh;
     display: flex;
     align-items: center;
+    flex-direction: column;
     background-color: rgba($very-dark-gray, .8);
     top: 0;
     left: 0;
     z-index: 99999;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+
 
     &__content {
         margin: 0 auto;
-        background-color: $white;
         box-shadow: 0 2rem 4rem $shadow;
         width: 65%;
         border-radius: 5px;
         display: table;
         overflow: hidden;
+        transform: scale(.35);
+        opacity: 0;
+        transition: all 1s .2s;
 
         &--images {
             width: 33.333333%;
@@ -41,6 +48,8 @@
             padding-left: 5rem;
             text-align: left;
             font-size: $default-font-size;
+            position: relative;
+            background-color: $white;
 
             &-p {
                 -moz-column-count: 2;
@@ -62,5 +71,34 @@
 
     }
 
+
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:target &__content {
+        transform: scale(1);
+        opacity: 1;
+    }
+    
+
+    &__close {  
+            line-height: 1;
+            display: inline-block;
+            color: $dark-gray;
+            position: absolute;
+            height: 3rem;
+            width: 3rem;
+            top: 3rem;
+            right: 3rem;
+            border-radius: 50%;
+            border: none;
+            font-size: $med;
+    }
+
+    &__close:hover {
+        color: $color-primary-light;
+    }
 
 }
