@@ -578,6 +578,7 @@ body {
   opacity: 1; }
 
 .navigation {
+  position: relative;
   background-image: #fff;
   color: #fff; }
   .navigation__checkbox {
@@ -675,7 +676,9 @@ body {
     transform: rotate(-135deg);
     top: 0; }
   .navigation__icon {
-    position: relative; }
+    position: absolute;
+    top: 3.4rem;
+    left: 1.6rem; }
     .navigation__icon, .navigation__icon::before, .navigation__icon::after {
       width: 4rem;
       height: 2px;
