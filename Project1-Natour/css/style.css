@@ -1,3 +1,30 @@
+/*
+$breakpoint argument choices
+- phone
+- tab_port
+- tab_land
+- b_desktop
+
+1em = 16px
+
+*/
+/*
+@mixin respond-phone {
+    @media (max-width: 600px) { @content };
+}
+
+@mixin respond-tabletPortrait {
+    @media (max-width: 900px) { @content };
+}
+
+@mixin respond-tabletLandscape {
+    @media (max-with: 1200px) { @content };
+}
+
+@mixin respond-big {
+    @media (min-width: 1800px) { @content};
+}
+*/
 @keyframes headingSpan1 {
   0% {
     opacity: 0;
@@ -36,7 +63,31 @@
 
 html {
   background-color: #fff;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  /* not needed for font-size; font-size of tab_port will aplly to this
+  
+    @include respond(phone) {
+      font-size: 50%;
+    }
+  
+
+    0RDER: Base + typography > general layout + grid >page layout > components
+    
+
+  */ }
+  html body {
+    padding: 2rem; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; }
+      html body {
+        padding: 0; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }
@@ -45,8 +96,7 @@ body {
   font-family: 'Lato', Arial, Helvetica, sans-serif;
   font-weight: 400;
   line-height: 1.7;
-  background-position: center;
-  padding: 2rem; }
+  background-position: center; }
 
 .header__button-n-text .heading--primary {
   display: flex;
@@ -63,6 +113,11 @@ body {
   animation: headingSpan1 2s ease-in-out;
   backface-visibility: hidden;
   /* hides part behind animation, prevents wiggle in animation */ }
+  @media (max-width: 37.5em) {
+    .heading--primary span:nth-of-type(1) {
+      letter-spacing: 1.75rem;
+      font-size: 2.05rem;
+      margin-left: .5rem; } }
 
 .heading--primary span:nth-of-type(2) {
   font-weight: 400;
@@ -71,11 +126,10 @@ body {
   animation: headingSpan2 2s ease-in-out;
   backface-visibility: hidden;
   /* hides part behind animation, prevents wiggle in animation */ }
-
-.discover-button-container {
-  display: flex;
-  justify-content: center;
-  padding-top: 1rem; }
+  @media (max-width: 37.5em) {
+    .heading--primary span:nth-of-type(2) {
+      letter-spacing: .25rem;
+      font-size: 1.5rem; } }
 
 .btn-white {
   color: #777; }
@@ -92,9 +146,21 @@ body {
   color: transparent;
   transition: all 2s;
   letter-spacing: .2rem; }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 1.9rem;
+      letter-spacing: .1rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 1.7rem;
+      letter-spacing: .05rem; } }
   .heading-secondary:hover {
     transform: skewY(6deg) skewX(12deg) scale(1.2);
     text-shadow: 0.5rem 1rem 2rem rgba(3, 2, 2, 0.4); }
+
+@media (max-width: 56.25em) {
+  .section-stories .heading-secondary {
+    font-size: 2.75rem; } }
 
 .heading-non-animated {
   transition: none; }
@@ -131,11 +197,20 @@ body {
   margin-top: 4rem; }
 
 .heading-tertiary {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin: 0 auto; }
 
 .text-center {
   width: 100%;
   text-align: center; }
+
+.button__container {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  max-width: 20rem;
+  margin: 0 auto;
+  align-items: center; }
 
 .btn {
   border: none;
@@ -214,7 +289,8 @@ body {
   .btn--animated:active {
     transform: translateY(0.125rem); }
   .btn--animated::after {
-    background-color: #fff; }
+    background-color: #fff;
+    max-width: 16rem; }
   .btn--animated--popup:hover {
     transform: translateY(-0.25rem); }
   .btn--animated--popup:active {
@@ -305,6 +381,8 @@ body {
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
     .card__side--back {
+      display: flex;
+      align-items: center;
       transform: rotateY(-180deg); }
       .card__side--back-1 {
         background-image: linear-gradient(to left bottom, #ffb900, orangered); }
@@ -349,13 +427,7 @@ body {
           border-bottom: 1.25px solid #c0c4c9; }
   .card__cta {
     color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    transform: translate(-50%, -50%); }
+    margin: 0 auto; }
     .card__cta > .btn--white,
     .card__cta .btn--animated {
       box-shadow: none;
@@ -388,20 +460,6 @@ body {
         .card__details ul li a:not(last-of-type) {
           margin: 1rem 5%;
           border-bottom: 1.25px solid #c0c4c9; }
-  .card__cta {
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    transform: translate(-50%, -50%); }
-    .card__cta > .btn--white,
-    .card__cta .btn--animated {
-      box-shadow: none;
-      animation: none;
-      z-index: 0; }
   .card__price-only {
     font-size: 2.25rem;
     font-weight: 400;
@@ -429,20 +487,6 @@ body {
         .card__details ul li a:not(last-of-type) {
           margin: 1rem 5%;
           border-bottom: 1.25px solid #c0c4c9; }
-  .card__cta {
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    transform: translate(-50%, -50%); }
-    .card__cta > .btn--white,
-    .card__cta .btn--animated {
-      box-shadow: none;
-      animation: none;
-      z-index: 0; }
   .card__price-only {
     font-size: 2.25rem;
     font-weight: 400;
@@ -463,8 +507,11 @@ body {
     position: absolute;
     transition: all 1s; }
     .composition__photo--p1 {
-      top: -2rem;
+      top: -10%;
       left: 0; }
+      @media (max-width: 1470px) {
+        .composition__photo--p1 {
+          top: 0%; } }
     .composition__photo--p2 {
       top: 25%;
       left: 17.5%; }
@@ -485,13 +532,13 @@ body {
   width: 21rem;
   background-color: rgba(255, 255, 255, 0.7);
   box-shadow: 0 1.5rem 20rem rgba(3, 2, 2, 0.4);
-  font-size: 1rem;
+  font-size: 1.5rem;
   padding: 2.5rem;
   text-align: center;
   border-radius: 4px;
   transition: transform .6s; }
   .feature-box:hover {
-    transform: translateY(-2rem) scale(1.075) skewY(-9deg); }
+    transform: translateY(-2rem) scale(1.075) skewY(-6deg); }
   .feature-box__icon {
     font-size: 6rem;
     display: inline-block;

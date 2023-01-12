@@ -13,9 +13,61 @@
     border-top-right-radius: 4px;
 }
 
-@mixin center-hori-vert {
+@mixin abs-center {
     position: absolute;
     top: 50%;
     right: 50%;
     transform: translate(-50%, -50%);
 }
+
+// MEDIA QUERY MANAGER
+
+/*
+$breakpoint argument choices
+- phone
+- tab_port
+- tab_land
+- b_desktop
+
+1em = 16px
+
+*/
+
+
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) { @content }; //600px
+    }
+
+    @if $breakpoint == tab-port {
+        @media (max-width: 56.25em) { @content }; //900px
+    }
+
+    @if $breakpoint == tab-land {
+        @media (max-width: 75em) { @content }; //1200px
+    }
+
+    @if $breakpoint == b-desktop {
+        @media (min-width: 112.5em) { @content }; //1800px
+    }
+}
+
+
+/*
+@mixin respond-phone {
+    @media (max-width: 600px) { @content };
+}
+
+@mixin respond-tabletPortrait {
+    @media (max-width: 900px) { @content };
+}
+
+@mixin respond-tabletLandscape {
+    @media (max-with: 1200px) { @content };
+}
+
+@mixin respond-big {
+    @media (min-width: 1800px) { @content};
+}
+*/

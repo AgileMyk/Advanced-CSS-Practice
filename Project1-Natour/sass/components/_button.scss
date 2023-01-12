@@ -102,7 +102,7 @@
       
     &--animated::after {
       background-color: $white;
-
+      max-width: 16rem;
     }
 
     &--animated--popup:hover {

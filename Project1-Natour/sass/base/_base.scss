@@ -7,7 +7,40 @@
   
   html {
     background-color: $white;
-    font-size: 62.5%; 
+    font-size: 62.5%;  //1rem = 10px
+
+    body {
+      padding: 2rem;
+    }
+
+  /* not needed for font-size; font-size of tab_port will aplly to this
+  
+    @include respond(phone) {
+      font-size: 50%;
+    }
+  
+
+    0RDER: Base + typography > general layout + grid >page layout > components
+    
+
+  */
+
+    @include respond(tab-land) {
+      font-size: 56.25%; //1rem = 8px = 8/16 => 56.25%
+    }
+
+    @include respond(tab-port) {
+      font-size: 50%;  //1rem = 9px = 9/16 => 50.00%
+
+      body {
+        padding: 0;
+      }
+    }
+
+    @include respond(b-desktop) {
+      font-size: 75%; //1rem = 12px = 12/16 => 75%
+    }
+
   }
   
   body {

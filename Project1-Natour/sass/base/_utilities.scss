@@ -24,6 +24,7 @@
 
 .heading-tertiary {
     text-transform: uppercase;
+    margin: 0 auto;
 }
 
 .text-center {
@@ -31,5 +32,13 @@
     text-align: center;
 }
 
-//anchors/list
+//button-containing divs
 
+.button__container {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    max-width: 20rem;
+    margin: 0 auto;
+    align-items: center;
+  }

@@ -2,7 +2,7 @@
     width: 21rem;
     background-color: rgba($white, .7);
     box-shadow: 0 1.5rem 20rem $shadow;
-    font-size: 1rem;
+    font-size: $general-size;
     padding: 2.5rem;
     text-align: center;
     border-radius: 4px;
@@ -10,7 +10,7 @@
 
     
     &:hover {
-        transform:translateY(-2rem) scale(1.075) skewY(-9deg);
+        transform:translateY(-2rem) scale(1.075) skewY(-6deg);
     }
 
     &__icon {

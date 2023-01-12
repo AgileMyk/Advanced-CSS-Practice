@@ -12,8 +12,12 @@
         transition: all 1s;
 
         &--p1 {
-            top: -2rem;
+            top: -10%;
             left: 0;
+
+            @media (max-width: 1470px) {
+                top: 0%;
+            }
         }
     
         &--p2 {

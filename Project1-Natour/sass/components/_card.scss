@@ -63,6 +63,8 @@
 
 
         &--back {
+            display: flex;
+            align-items: center;
             transform: rotateY(-180deg);
 
             &-1 {
@@ -152,10 +154,7 @@
 
     &__cta {
         color: $white;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        @include center-hori-vert;
+        margin: 0 auto;
         
         > .btn--white,
           .btn--animated
@@ -222,22 +221,6 @@
         }
     }
 
-    &__cta {
-        color: $white;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        @include center-hori-vert;
-
-        > .btn--white,
-          .btn--animated
-        {
-            box-shadow: none;  
-            animation: none;
-            z-index: 0;
-
-        }
-    }
 
     &__price {
         
@@ -291,23 +274,6 @@
                 }
 
             }
-        }
-    }
-
-    &__cta {
-        color: $white;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        @include center-hori-vert;
-
-        > .btn--white,
-          .btn--animated
-        {
-            box-shadow: none;  
-            animation: none;
-            z-index: 0;
-
         }
     }
 
