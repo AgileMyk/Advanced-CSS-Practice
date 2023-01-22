@@ -4,17 +4,41 @@
     background-color: $very-dark-gray;
     clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
     z-index: 5;
+
+    @include respond(tab-land) {
+      padding: 20rem;
+    }
+
+    @include respond(phone) {
+      padding: 10rem;
+    }
+
+    &__logo-box {
+      text-align: center;
+      border-bottom: 2px solid $color-gray-light-1;
+      margin-bottom: 2rem;
+    }
+
+    &__img {
+      margin-bottom: 3rem;
+    }
   
     &__list {
       list-style: none;
       display: flex;
       gap: 2rem;
-      width: 50%;
+      width: 100%;
+      justify-content: space-evenly;
     }
   
     &__link {
       color: $white;text-decoration: none;
       font-size: $small;
+
+      @include respond(phone) {
+        font-size: $general-size;
+      }
+
     }
   
     &__text {
@@ -24,6 +48,7 @@
     &__copyright {
       color: $white;
       font-size: 1.5rem;
+      margin-top: 5rem;
   
       a {
         text-decoration: none;

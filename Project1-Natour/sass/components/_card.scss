@@ -4,6 +4,8 @@
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
+    min-width: 27rem;
+    max-width: 33.5rem;
 
     &__side {
         height: 100%;

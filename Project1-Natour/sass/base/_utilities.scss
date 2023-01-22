@@ -38,7 +38,25 @@
     display: flex;
     justify-content: center;
     padding-top: 1rem;
-    max-width: 20rem;
-    margin: 0 auto;
+    width: 100%;
     align-items: center;
+  }
+
+  .two-at-small {
+    @include respond(tab-land) {
+        padding: 12rem 3rem;
+        justify-content: space-evenly;
+        gap: 2.5rem;
+      }
+  
+      @include respond(phone) {
+        flex-wrap: wrap;
+        padding: 4rem 6rem;
+        gap: 6rem;
+  
+        .feature-box {
+          width: 35%;
+          height: 20rem;
+        }
+      }
   }

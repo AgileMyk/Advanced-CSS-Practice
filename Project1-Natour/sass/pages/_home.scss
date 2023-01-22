@@ -63,7 +63,7 @@
   transform: skewY(-6deg);
   text-align: center;
   padding: 12.5rem;
-
+  width: 100%;
   position: relative;
 
   & > * {
@@ -89,20 +89,38 @@
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(3, 1fr);
-    gap: 15%;
+    gap: minmax(10%, 15%);
     margin-top: $med;
     // this perspective is for .card (first 3)
     perspective: 150rem;
     -moz-perspective: 150rem;
-  }
+    gap: 8rem;
+
+    @include respond(tab-land) {
+      gap: 4rem;
+    }
+
+    @include respond(phone) {
+
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+
+      .card:last-of-type {
+        grid-row: 2 / 3;
+        grid-column: 1 / 3;
+        justify-self: center;
+        width: 105%;
+      }
+
+      gap: 2rem;
+    }
 }
 
 .section-stories {
   padding: 20rem 5rem;
   background-color:none;
   margin: -15rem auto;
-  position: relative;
-
+  position: relative;  
 }
 
 .section-book {
@@ -206,43 +224,4 @@ grid-template-columns: 1fr 1fr;
 
   }
 }
-
-//move to nav component
-
-/*.navigation {
-  height: 6rem;
-  width: 6rem;
-  border-radius: 50%;
-  background-image: linear-gradient(to bottom right, $primary-color-light, $primary-color-dark);
-  color: $white;
-
-  &__checkbox {
-
-  }
-
-  &__button {
-
-  }
-
-  &__background {
-
-  }
-
-  &__nav {
-
-  }
-
-  &__list {
-
-  }
-
-  &__item {
-
-  }
-
-  &__link {
-
-  }
-
 }
-*/
