@@ -6,10 +6,16 @@ medium green: #55c57a
 dark green: #28b485
 
 */
-* {
+*,
+*::after,
+*::before {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 a {
@@ -20,9 +26,10 @@ a {
 body {
     font-family: 'Lato', Arial, Helvetica, sans-serif;
     font-weight: 400;
-    font-size: 16px;
     line-height: 1.7;
-    padding: 2rem;
+    padding: 3rem;
+    box-sizing: border-box;
+
 }
 
 .header {
@@ -69,12 +76,49 @@ span {
     font-size: 5rem;
     letter-spacing: 1.85rem;
     font-weight: 700;
+    animation: headerFromLeft 1.75s ease-in .25s forwards;
+}
+
+@keyframes headerFromLeft {
+    
+    0%{
+        transform: translateX(-6rem);
+        opacity: 0;
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+
+    100% {
+        transform: translateX(0rem);
+        opacity: 1;
+    }
 }
 
 .heading-primary-sub {
     font-size: 1.75rem;
     letter-spacing: 1rem;
     font-weight: 400;
+    animation: headerFromRight 1.75s ease-in-out .25s forwards;
+
+}
+
+@keyframes headerFromRight {
+    
+    0%{
+        transform: translateX(6rem);
+        opacity: 0;
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        transform: translateX(0rem);
+        opacity: 1;
+    }
 }
 
 /* buttons */
@@ -82,13 +126,31 @@ span {
 
 .btn:link,
 .btn:visited {
-    font-size: 1.15rem;
+    font-size: 1.6rem;
     text-transform: uppercase;
-    font-weight: 300;
-    padding: 1rem 3rem;
+    font-weight: 400;
+    padding: 1rem 2rem;
     border: none;
     border-radius: 30px;
     position: relative;
+}
+
+.btn-animated {
+    animation: buttonUp 1.5s ease-in-out backwards;
+}
+
+@keyframes buttonUp{
+
+    0% {
+        transform: translateY(1rem);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+
 }
 
 .btn::after {
@@ -105,8 +167,7 @@ span {
 }
 
 .btn:hover::after {
-    transform: scaleY(2);
-    transform: scaleX(1.2);
+    transform: scale(1.5);
     opacity: 0;
 }
 
