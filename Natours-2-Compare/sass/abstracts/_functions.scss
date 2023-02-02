@@ -1,0 +1,7 @@
+@function colorLighten ($col, $perc) {
+    @return lighten($col * $perc);
+}
+
+@function colorDarken ($col, $perc) {
+    @return darken($col, $perc);
+}
