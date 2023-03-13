@@ -7,13 +7,11 @@
 }
 
 html {
+    //this defines 1rem => 10px calc from the typical web browser 16px auto
     font-size: 62.5%;
 }
 
-a {
-    text-decoration: none;
-    display: inline-block;
-}
+
 
 body {
     font-family: 'Lato', Arial, Helvetica, sans-serif;
@@ -21,5 +19,12 @@ body {
     line-height: 1.7;
     padding: 3rem;
     box-sizing: border-box;
+
+    a {
+        text-decoration: none;
+        display: inline-block;
+        color: none;
+        background-color: none;
+    }
 
 }

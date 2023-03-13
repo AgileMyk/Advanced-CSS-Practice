@@ -1,0 +1,11 @@
+@mixin clearfix {
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin general-shadow {
+    text-shadow: .5rem 2rem 4rem rgba($shadow-black, .6);
+}

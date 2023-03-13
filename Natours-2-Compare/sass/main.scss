@@ -1,66 +1,17 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
 @import "base/animations";
 @import "base/base";
 @import "base/typography";
 @import "base/utilities";
 
+@import "components/buttons";
+
+@import "layouts/grid";
+
+@import "pages/home";
 
 
-.header {
-    height: 95vh;
-    background-image: linear-gradient(to right bottom, 
-    rgba($primary-color-light, .8), 
-    rgba($primary-color-dark, .7)), url(../img/hero.jpg);
-    background-size: cover;
-    background-position: top;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    position: relative;
-}
 
-&__logo-box {
-    position: absolute;
-    top: 2rem;
-    left: 2rem;
-
-}
-
-&__logo {
-    height: 2rem;
-    
-}
-
-&__text--btn {
-    text-align: center;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.heading-primary {
-    color: #fff;
-    text-transform: uppercase;
-
-    &--main {
-        font-size: 5rem;
-        letter-spacing: 1.85rem;
-        font-weight: 700;
-        animation: headerFromLeft 1.75s ease-in .25s forwards;
-    }
-
-    &--sub {
-        font-size: 1.75rem;
-        letter-spacing: 1rem;
-        font-weight: 400;
-        animation: headerFromRight 1.75s ease-in-out .25s forwards;
-    
-    }
-}
-
-span {
-    display: block;
-}
-
-
-&__text--btn-btn {
-    margin-top: 3rem;
-}

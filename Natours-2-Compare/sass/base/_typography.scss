@@ -1,0 +1,35 @@
+//about section
+
+.heading-secondary {
+    font-weight: 700;
+    font-size: 3rem;
+    text-transform: uppercase;
+    transition: all .5s;
+    background-image: linear-gradient(to right, $primary-color-light, $primary-color-dark);
+    -webkit-background-clip: text;
+    background-clip: text;
+    letter-spacing: 2px;
+    color: transparent;
+
+
+    &:hover {
+        background-image: linear-gradient(to left, $primary-color-light, $primary-color-dark);
+        transform: skewY(2deg) skewX(9deg) scale(1.1);
+        @include general-shadow;
+    }
+}
+
+.heading-tertiary {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1.25rem;
+    color: $dark-gray-1;
+}
+
+.section-about p {
+    font-size: 1.125rem;
+    color: $dark-gray-1;
+    font-weight: 600;
+
+    
+}
