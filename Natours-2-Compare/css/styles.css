@@ -26,6 +26,12 @@
     transform: translateY(0rem);
     opacity: 1; } }
 
+@keyframes green-click {
+  0% {
+    width: 7.4rem; }
+  100% {
+    width: 8.8rem; } }
+
 *,
 *::after,
 *::before {
@@ -42,11 +48,11 @@ body {
   line-height: 1.7;
   padding: 3rem;
   box-sizing: border-box; }
-  body a {
-    text-decoration: none;
-    display: inline-block;
-    color: none;
-    background-color: none; }
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  background: none; }
 
 .heading-secondary {
   font-weight: 700;
@@ -73,6 +79,8 @@ body {
   font-size: 1.125rem;
   color: #5a5959;
   font-weight: 600; }
+  .section-about p:not(:last-of-type) {
+    margin-bottom: 2rem; }
 
 .mar-b-s {
   margin-bottom: 1.5rem; }
@@ -123,15 +131,31 @@ body {
       opacity: 0; }
   .btn:active {
     transform: translateY(0.05rem);
-    box-shadow: 0 0.5rem 2rem 0.25rem rgba(0, 0, 0, 0.4); }
+    box-shadow: 0 0.75rem 2rem 0.25rem rgba(0, 0, 0, 0.4); }
   .btn--white {
     background-color: #fff;
     color: #000; }
     .btn--white::after {
       background-color: #fff; }
-  .btn--green {
-    background-color: #55c57a;
-    color: #fff; }
+
+.green-button {
+  display: inline-block;
+  padding: 2px; }
+  .green-button:link, .green-button:visited {
+    color: #28b485;
+    border-bottom: 1.5px solid #28b485; }
+  .green-button:hover {
+    background-color: #28b485;
+    color: #fff;
+    border-bottom: 1.5px solid #fff;
+    font-weight: 900;
+    font-size: 1.1rem;
+    box-shadow: 0 0.75rem 2rem 0.25rem rgba(0, 0, 0, 0.4);
+    animation: green-click .2s ease-in forwards; }
+  .green-button:active {
+    transform: scale(1.025);
+    box-shadow: 0 0.3rem 1.5rem 0.125rem rgba(0, 0, 0, 0.4);
+    transform: scale(0.9); }
 
 /*.row {
     max-width: $grid-width;
@@ -231,3 +255,13 @@ span {
   background-color: #f8f7f7;
   padding: 25rem 15rem;
   margin-top: -20vh; }
+
+.row {
+  display: flex;
+  gap: 3rem; }
+
+.col-1-of-2 {
+  width: 50%; }
+
+.col-2-of-2 {
+  width: 50%; }

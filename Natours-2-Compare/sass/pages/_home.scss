@@ -68,3 +68,17 @@ span {
     
 }
 
+
+.row {
+    display: flex;
+    gap: 3rem;
+}
+
+.col-1-of-2 {
+    width: 50%;
+}
+
+.col-2-of-2 {
+    width: 50%;
+    
+}

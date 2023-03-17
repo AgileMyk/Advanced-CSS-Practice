@@ -3,7 +3,7 @@
 
     &:link,
     &:visited {
-    font-size: 1.6rem;
+    font-size: $regular;
     text-transform: uppercase;
     font-weight: 400;
     padding: 1rem 2rem;
@@ -39,7 +39,7 @@
     &:hover {
         transform: translateY(-.25rem);
         transition: all .175s;
-        box-shadow: 0 1rem 4rem .5rem rgba($shadow-black, 0.4);
+        box-shadow: $great rgba($shadow-black, 0.4);
         color: black;
         background-color: white;
 
@@ -52,7 +52,7 @@
     
     &:active {
         transform: translateY(.05rem);
-        box-shadow: 0 .5rem 2rem .25rem rgba($shadow-black, 0.4);
+        box-shadow: $moderate rgba($shadow-black, 0.4);
     
     }
     
@@ -60,17 +60,42 @@
     
     
     &--white {
-        background-color: #fff;
+        background-color: $white;
         color: #000;
     
         &::after {
-            background-color: #fff;
+            background-color: $white;
         }
     }
-    
-    &--green {
-        background-color: $primary-color;
-        color: #fff;
+
+}
+
+.green-button {
+
+    display: inline-block;
+    padding: 2px;
+
+    &:link, &:visited {
+    color: $primary-color-dark;
+    border-bottom: 1.5px solid $primary-color-dark;
+
+
     }
 
+    &:hover {
+        background-color: $primary-color-dark;
+        color: $white;
+        border-bottom: 1.5px solid $white;
+        font-weight: 900;
+        font-size: 1.1rem;
+        box-shadow: $moderate rgba($shadow-black, 0.4);
+        animation:  green-click .2s ease-in forwards;
+    }
+
+    &:active {
+        transform: scale(1.025);
+        box-shadow: $minor rgba($shadow-black, 0.4);
+        transform: scale(.9);
+    }
+    
 }

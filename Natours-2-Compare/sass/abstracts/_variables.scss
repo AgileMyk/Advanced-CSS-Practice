@@ -6,13 +6,23 @@ $primary-color-dark: #28b485;
 
 //grays/blacks
 
+$white: #fff;
 $shadow-black: rgb(0, 0, 0);
 $light-gray-1: rgb(248, 247, 247);
 $dark-gray-1: rgb(90, 89, 89);
-
 
 //grid layout
 
 $grid-width: 114rem;
 $grid-gutter-vert: 8rem;
 $grid-gutter-hor: 6rem;
+
+//shadow settings
+
+$great: 0 1rem 4rem .5rem;
+$moderate: 0 .75rem 2rem .25rem;
+$minor: 0 .3rem 1.5rem .125rem;
+
+//font-sizes
+
+$regular: 1.6rem; // this is a way 'to set-back-to' the common 16px size, after the 62.5% root adjustment
