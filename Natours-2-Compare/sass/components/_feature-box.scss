@@ -1,0 +1,37 @@
+.feature-box {
+
+    
+    background-color: rgba($white, .8);
+    min-height: 35rem;
+    max-width: 24rem;
+    font-size: 1.25rem;
+    padding: 2.5rem;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($shadow-black, .15);
+
+    transition: transform .16s;
+
+    
+    &__icon {
+        font-size: 6rem;
+        margin-bottom: .5rem;
+        
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        background-image: linear-gradient(to right, $primary-color-light, $primary-color-dark);
+    
+    }
+
+    &__text {
+
+    }
+
+    &:hover {
+        transform: translateY(-.5rem) scale(1.025);
+        box-shadow: 0 1rem 2rem rgba($shadow-black, .15);
+
+    }
+
+}

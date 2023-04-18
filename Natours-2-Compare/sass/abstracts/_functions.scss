@@ -5,3 +5,7 @@
 @function colorDarken ($col, $perc) {
     @return darken($col, $perc);
 }
+
+@function cancelSkew ($deg) {
+    @return transform(skewY(($deg)deg));
+}
