@@ -70,7 +70,6 @@ span {
     
 }
 
-
 .row {
     display: flex;
     gap: 3rem;
@@ -131,13 +130,21 @@ span {
     background-color: $light-gray-1;
     padding: 25rem 15rem;
     margin-top: -20vh;
-
     transform: skewY(-5deg);
 
     & > *:not(:first-child) {
         transform: skewY(5deg);
     }
 
-    & >:first-child {
-    }
+    & .row {
+        justify-content: space-between;
+    } 
+
+}
+
+
+
+.col-1-of-3 {
+    width: 27%;
+
 }

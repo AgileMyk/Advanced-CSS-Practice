@@ -211,6 +211,36 @@ a {
     transform: translateY(-0.5rem) scale(1.025);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15); }
 
+.card {
+  height: 50rem;
+  transition: 1s;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 50rem; }
+  .card__side {
+    height: 50rem;
+    color: #fff;
+    font-size: 3rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    transition: 1s ease;
+    backface-visibility: hidden; }
+    .card__side--front {
+      background-color: #fff; }
+    .card__side--back {
+      transform: rotateY(180deg); }
+      .card__side--back-1 {
+        background-image: linear-gradient(to bottom right, #ffb900, #ff5e00); }
+  .card:hover .card__side--front {
+    transform: rotateY(180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0deg); }
+
 /*.row {
     max-width: $grid-width;
     background-color: rgb(212, 245, 245);
@@ -353,3 +383,8 @@ span {
   transform: skewY(-5deg); }
   .section-tours > *:not(:first-child) {
     transform: skewY(5deg); }
+  .section-tours .row {
+    justify-content: space-between; }
+
+.col-1-of-3 {
+  width: 27%; }
