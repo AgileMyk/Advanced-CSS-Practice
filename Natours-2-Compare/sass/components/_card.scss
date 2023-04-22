@@ -1,15 +1,17 @@
 .card {
-    height: 50rem;
+
+    //FUNCTIONALITY
+
+    height: 40rem;
     transition: 1s;
     
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
-    height: 50rem;
 
 
     &__side {
-        height: 50rem;
+        height: 100%;
 
         color: $white;
         font-size: 3rem;
@@ -20,6 +22,7 @@
         width: 100%;
 
         border-radius: 3px;
+        overflow: hidden;
         box-shadow: 0 1.5rem 4rem rgba($shadow-black, .15);
 
         transition: 1s ease;
@@ -46,7 +49,104 @@
     }
 
     &:hover &__side--back {
-        transform: rotateY(0deg);
+        transform: rotateY(360deg);
     }
+
+    //FRONT SIDE STYLING
+    &__picture {
+
+        height: 23rem;
+        background-size: cover;
+        background-blend-mode: screen;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        -moz-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        
+
+        &--1 {
+            background-image: linear-gradient(to bottom right, $color-secondary-light, $color-secondary-dark),
+            url(../img/nat-5.jpg);
+        }
+    
+        &--2 {
+            background-image: url(../img/nat-5.jpg);
+
+        }
+     
+        &--3 {
+            background-image: url(../img/nat-5.jpg);
+
+        }
+    }
+    
+    &__heading {
+
+        text-transform: uppercase;
+        font-size: 2.25rem;
+        font-weight: 300;
+        color: $white;
+        position: absolute;
+        top: 37.5%;
+        left: 20%;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        width: 65%;
+        text-align: right;
+
+    }
+ 
+    &__heading-span {
+
+        padding: .5rem 1.25rem;
+
+        &--1 {
+            background-image: linear-gradient(to bottom right,
+             rgba($color-secondary-light,.85), 
+             rgba($color-secondary-dark, .85));
+        }
+
+        &--2 {
+            background-image: linear-gradient(to bottom right,
+             rgba($primary-color-light, .85), 
+             rgba($primary-color-dark, .85));
+
+        }
+
+        &--3 {
+            background-image: linear-gradient(to bottom right,
+             rgba($color-tertiary-light, .85), 
+             rgba($color-tertiary-light, .85));
+
+        }
+
+    }
+
+    &__details {
+
+        ul {
+            list-style: none;
+            width: 70%;
+            margin: 0 auto;
+
+            li {
+                text-align: center;
+                font-size: 1.25rem;
+                padding: 1rem;
+                padding-bottom: 8%;
+                color: $gray-style-1;
+                border-bottom: 1px solid $gray-style-1;
+            
+ 
+
+        }
+
+
+
+    }
+
+    //BACKSIDE STYLING
 }
 
+
+
+}
