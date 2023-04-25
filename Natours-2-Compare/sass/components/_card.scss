@@ -1,7 +1,7 @@
 .card {
 
     //FUNCTIONALITY
-
+    width: 22rem;
     height: 40rem;
     transition: 1s;
     
@@ -37,8 +37,22 @@
             transform: rotateY(180deg);
             
             &-1 {
-                background-image: linear-gradient(to bottom right, $color-secondary-light, $color-secondary-dark);
+                background-image: linear-gradient(to bottom right, 
+                                    $color-secondary-light, 
+                                    $color-secondary-dark);
             }
+
+            &-2 {
+                background-image: linear-gradient(to bottom right,
+                                    $primary-color-light, 
+                                    $primary-color-dark);
+                }
+
+            &-3 {
+                background-image: linear-gradient(to bottom right,
+                                    $color-tertiary-light, 
+                                    $color-tertiary-dark);
+                }
 
         }
 
@@ -64,17 +78,25 @@
         
 
         &--1 {
-            background-image: linear-gradient(to bottom right, $color-secondary-light, $color-secondary-dark),
-            url(../img/nat-5.jpg);
+            background-image: linear-gradient(to bottom right,
+                                $color-secondary-light, 
+                                $color-secondary-dark),
+                                url(../img/nat-5.jpg);
         }
     
         &--2 {
-            background-image: url(../img/nat-5.jpg);
+            background-image: linear-gradient(to bottom right,
+                                $primary-color-light, 
+                                $primary-color-dark),
+                                url(../img/nat-6.jpg);
 
         }
      
         &--3 {
-            background-image: url(../img/nat-5.jpg);
+            background-image: linear-gradient(to bottom right,
+                                $color-tertiary-light, 
+                                $color-tertiary-dark),
+                                url(../img/nat-7.jpg);
 
         }
     }
@@ -93,11 +115,11 @@
         width: 65%;
         text-align: right;
 
+
     }
  
     &__heading-span {
 
-        padding: .5rem 1.25rem;
 
         &--1 {
             background-image: linear-gradient(to bottom right,
@@ -109,7 +131,7 @@
             background-image: linear-gradient(to bottom right,
              rgba($primary-color-light, .85), 
              rgba($primary-color-dark, .85));
-
+            width: 120%;
         }
 
         &--3 {
@@ -135,18 +157,35 @@
                 padding-bottom: 8%;
                 color: $gray-style-1;
                 border-bottom: 1px solid $gray-style-1;
-            
- 
+                }
+
+            }
 
         }
 
+        //BACKSIDE STYLING
 
-
+    &__cta {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
     }
 
-    //BACKSIDE STYLING
-}
+    &__price-box {
+        text-align: center;
+        margin-bottom: 8rem;
+    }
 
+    &__price-only {
+        font-size: 2.4rem;
+        text-transform: uppercase;
+    }
+
+    &__price-value {
+        font-size: 6rem;
+        font-weight: 100;
+    }
 
 
 }
