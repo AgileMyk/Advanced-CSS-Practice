@@ -10,46 +10,9 @@
     border: none;
     border-radius: 30px;
     position: relative;
-    color: black;
-    background-color: white;
 
-    &--white {
-        color: white;
-        background-color: transparent;
-    }
 
     }
-
-    &--green {
-        
-        color: $primary-color-dark;
-        background-color: none;
-        font-size: $regular;
-        font-weight: 400;
-        border-bottom: 0px solid $primary-color-dark;
-        transition: 1s;
-        padding: .25rem;
-        background-color: $white;
-        border-radius: 3px;
-        display: flex;
-        width: 17.5rem;
-
-        &:hover {
-            border-bottom: 1.5px solid $primary-color-dark;
-            width: 30rem;
-            transform: scale(1.05);
-            box-shadow: $moderate rgba($shadow-black, 0.4);
-        }
-
-        &:active {
-            
-            width: 15rem;
-            transform: scale(.9);
-        }
-
-       
-    }
-
 
     &--animated {
         animation: buttonUp 1.5s ease-in-out backwards;
@@ -75,8 +38,6 @@
         transform: translateY(-.25rem);
         transition: all .175s;
         box-shadow: $great rgba($shadow-black, 0.4);
-        color: black;
-        background-color: white;
 
         &::after {
             transform: scale(1.5);
@@ -101,6 +62,17 @@
         &::after {
             background-color: $white;
         }
+    }
+
+    &--green {
+        
+        background-color: $primary-color;
+        color: $white;
+
+        &::after {
+            background-color: $primary-color;
+        }
+       
     }
 
 }
