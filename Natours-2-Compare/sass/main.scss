@@ -2,7 +2,6 @@
 @import "abstracts/mixins";
 @import "abstracts/variables";
 
-@import "base/animations";
 @import "base/base";
 @import "base/typography";
 @import "base/utilities";
@@ -12,6 +11,7 @@
 @import "components/feature-box";
 @import "components/card";
 @import "components/story";
+@import "components/bg.video";
 
 @import "layouts/grid";
 

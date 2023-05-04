@@ -72,6 +72,24 @@
         &::after {
             background-color: $primary-color;
         }
+
+        &-transparent {
+             color: $primary-color-dark;
+             background-color: rgba($white, .4);
+             border-bottom: 1px solid $primary-color-dark;
+
+             font-size: 1.5rem;
+             font-weight: 700;
+             padding: .25rem;
+             transition: .2s;
+
+             &:hover {
+                background-color: rgba($color: $primary-color-dark, $alpha: .5);
+                color: $white;
+                border-bottom: 1px solid $white;
+             }
+                
+        }
        
     }
 

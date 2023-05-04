@@ -75,6 +75,7 @@ span {
 .row {
     display: flex;
     gap: 3rem;
+
 }
 
 .col-1-of-2 {
@@ -129,7 +130,6 @@ span {
 }
 
 .section-tours {
-    background-color: $light-gray-1;
     padding: 15rem 15rem;
     margin-top: -20vh;
     transform: skewY(-5deg);
@@ -152,5 +152,72 @@ span {
 .section-story {
     transform: skewY(-5deg);
     padding: 15rem 0;
-    background-color: $gray-style-1;
+    text-align: center;
+    position: relative;
+}
+
+
+.section-book {
+    padding: 15rem 0;
+    background-image: linear-gradient(to right bottom,
+                       $primary-color-light,
+                       $primary-color-dark);
+    transform: skewY(-5deg);
+    
+    & > .row {
+        display: block;
+    }
+}
+
+.book {
+    width: 85%;
+    margin: 0 auto;
+    background-image: linear-gradient(102.5deg,
+                      rgba($white, .8) 45%,
+                      rgba($white, .0) 45.1%), 
+                      url(/img/nat-10.jpg);
+    background-repeat: no-repeat;
+    background-size: 116%;
+    border-radius: 3px;
+    box-shadow: 0 3rem 6rem rgba($shadow-black, .3);
+    object-fit: contain;
+
+    height: 50rem;
+    padding: 5rem 7.5rem 0;
+
+}
+
+.form {
+    height: 100%;
+    width: 45%;
+    
+
+    &__group {
+        margin: 0 auto;
+
+
+        &--sizes {
+
+            
+
+            &-fieldset {
+                border-radius: 9px;
+                padding: 2.5rem;
+                border: 0px solid $primary-color;
+                transition: .2s;
+
+                &:hover {
+                    border: 3px solid $primary-color;
+                    padding: 22px
+                }
+            }
+
+            &-legend {
+                margin-bottom: 1rem;
+                font-size: 2rem;
+                color: $primary-color;            
+
+        }
+    }
+    }
 }
