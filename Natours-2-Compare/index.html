@@ -32,7 +32,7 @@
         </div>
 
     </header>
-    <div class="main">
+    <main>
 
         <section class="section-about">
             <div class="heading-secondary mar-b-m u-center-text">
@@ -284,45 +284,66 @@
             
         </section>
         <section class="section-book">
+            
             <div class="row">
                 <div class="book counter-skewY">
                     <div class="book__form">
+                        <div class="heading-secondary mar-b-m">
+                            Start Booking Now
+                        </div>
                         <form action="#" class="form" method="post">
                             <div class="form__group">
 
-                                <div class="form__group--name">
-                                    <input id="name" type="text" class="form__input" placeholder="Full Name" required>
+                                <div class="form__group--child form__group--child-name">
                                     <label for="name" class="form__label">Full name</label>
+                                    <input id="name" type="text" class="form__input" placeholder="Full Name" required>
                                 </div>
-                                <div class="form__group--email">
-                                    <input id="email" type="email" class="form__input" placeholder="Email" required>
+                                <div class="form__group--child form__group--child-email">
                                     <label for="email" class="form__label">Email</label>
+                                    <input id="email" type="email" class="form__input" placeholder="Email" required>
                                 </div>
-                                <div class="form__group--number">
-                                    <input type="tel" id="phone_number" placeholder="Preferred Phone Number"required>
+                                <div class="form__group--child form__group--child-number">
                                     <label for="phone_number" class="form__label">Number to Contact</label>
+                                    <input type="tel" id="phone_number" class="form__input" placeholder="Preferred Phone Number"required>
                                 </div>
                                 
-                                <div id="form__group--sizes" class="form__group--radio">
-                                    <fieldset class="form__group--sizes form__group--sizes-fieldset">
-
-                                        <label for="form__group--sizes form__group--sizes-legend">
-                                            <legend class="form__group--sizes form__group--sizes-legend">Choose your group size</legend>
-                                        </label>
+                                <div class="form__group--radio">
+                                    
                                         
-                                        <input type="radio" name="tour_choice" id="radio__small">
-                                        <label for="radio__small">Small group tour</label>
-                                        <input type="radio" name="tour_choice" id="radio_medium">
-                                        <label for="radio_medium">Medium group tour</label>
-                                        <input type="radio" name="tour_choice" id="radio_large">
-                                        <label for="radio_large">Large group tour</label>
+                                        <div class="form__group--radio-container">
+                                            <input type="radio" name="tour_choice" id="radio__small">
+                                            <label class="form__group--radio-label" for="radio__small">
+                                                <span class="radio__button">
+                                                    <!--In _buttons, not _form-->
+                                                </span>
+                                                Small group tour
+                                            </label>
+                                        </div>
 
-                                    </fieldset>
+                                        <div class="form__group--radio-container">
+                                            <input type="radio" name="tour_choice" id="radio_medium">
+                                            <label class="form__group--radio-label" for="radio_medium">
+                                                <span class="radio__button">
+                                                    <!--In _buttons, not _form-->
+                                                </span>
+                                                Medium group tour
+                                            </label>
+                                        </div>
+
+                                        <div class="form__group--radio-container">
+                                            <input type="radio" name="tour_choice" id="radio_large">
+                                            <label class="form__group--radio-label" for="radio_large">
+                                                <span class="radio__button">
+                                                    <!--In _buttons, not _form-->
+                                                </span>
+                                                Large group tour
+                                            </label>
+                                        </div>
 
                                 </div>
 
                                 <div class="form__group--btn">
-                                    <a href="#" class="btn btn--green btn-round btn-general">Next Step &rarr;</a>
+                                    <button href="#" class="btn btn--green btn-round btn-general">Next Step &rarr;</button>
                                 </div>
                             </div>
                         </form>
@@ -331,7 +352,36 @@
             </div>
 
         </section>
-    </div>
+    
+    </main>
+
+    <footer class="footer">
+        <div class="footer__logo-box">
+            <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo">
+        </div>
+
+        <div class="row">
+            <div class="col-1-of-2">
+                <div class="footer__navigation">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Contact Us</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Careers</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Prvacy Policy</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-2-of-2">
+                <p class="footer__copyright">
+                    Built by <a href="#" class="footer__link">Jonas Schmedtmann</a> for 
+                    his online course. Copyright &copy; by Jonas Schmedtmann. Used for 
+                    learning reasons. 
+                </p>
+            </div>
+        </div>
+    </footer>
+
 </body>
 
 <!--
