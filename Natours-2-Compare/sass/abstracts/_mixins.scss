@@ -7,5 +7,26 @@
 }
 
 @mixin general-shadow {
-    text-shadow: .5rem 2rem 4rem rgba($shadow-black, .6);
+    box-shadow: .5rem 2rem 4rem rgba($shadow-black, .6);
+}
+
+@mixin footer_border_top {
+    border-top: 3px solid $dark-gray-1;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin li_number {
+    height: 2rem;
+    color: $white;
+    margin-right: 1.5rem;
+    font-size: 2.5rem;
+    font-weight: 300;
 }
