@@ -91,7 +91,8 @@ a {
 
 .btn-general {
   width: 21rem;
-  height: 4.5rem; }
+  height: 4.5rem;
+  text-align: center; }
 
 .btn {
   /* begin header button animation */
@@ -465,6 +466,117 @@ a {
   .form__input:placeholder-shown ~ .form__label {
     opacity: 0;
     visibility: hidden; }
+
+.section-popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3000;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 12.5vh 8vw;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0);
+  transition: .2s; }
+  .section-popup:target {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1); }
+
+.popup__content {
+  background-color: #fff;
+  max-width: 120rem;
+  margin: 0 auto;
+  height: 100%;
+  min-height: 38rem;
+  box-shadow: 0rem 4rem 4rem rgba(0, 0, 0, 0.9);
+  display: flex;
+  border-radius: 4px;
+  overflow: hidden; }
+  .popup__content--images {
+    width: 24%; }
+    .popup__content--images-img1 {
+      background-image: url(/img/nat-8.jpg);
+      background-size: cover;
+      height: 50%; }
+    .popup__content--images-img2 {
+      background-image: url(/img/nat-9.jpg);
+      background-size: cover;
+      height: 50%; }
+  .popup__content--text {
+    width: 66%;
+    padding: 5rem 3rem 7rem 10rem;
+    position: relative; }
+  .popup__content--close, .popup__content--close:link, .popup__content--close:visited {
+    position: absolute;
+    top: 2rem;
+    right: -6rem;
+    color: #5a5959;
+    font-size: 2.5rem;
+    font-weight: 400;
+    transition: .4s; }
+    .popup__content--close:hover, .popup__content--close:link:hover, .popup__content--close:visited:hover {
+      color: #55c57a;
+      transform: scale(2.35);
+      transform: rotate(90deg); }
+  .popup__content--checkbox {
+    position: absolute;
+    top: 2rem;
+    right: -5.5rem;
+    display: none; }
+  .popup__content--p {
+    -moz-column-count: 2;
+    column-count: 2;
+    -moz-column-gap: 3.5rem;
+    column-gap: 3.5rem;
+    min-height: 12rem;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto; }
+
+.booking__details {
+  visibility: hidden;
+  opacity: 0;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  border: 2px solid silver;
+  background: rgba(90, 89, 89, 0.8);
+  transform: scale(0);
+  position: fixed;
+  top: 0;
+  left: 0; }
+  .booking__details:target {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    z-index: 3000; }
+  .booking__details--container {
+    border: 3px solid black;
+    margin: 10rem 15rem;
+    border-radius: .75rem;
+    position: relative; }
+  .booking__details--form {
+    padding: 5rem 2.5rem; }
+  .booking__details--close, .booking__details--close:link, .booking__details--close:visited {
+    display: inline-block;
+    font-size: 3rem;
+    color: #333;
+    position: absolute;
+    top: .5rem;
+    right: 2rem;
+    transition: .5s; }
+    .booking__details--close:hover, .booking__details--close:link:hover, .booking__details--close:visited:hover {
+      color: #55c57a;
+      transform: scale(1.35);
+      transform: rotate(90deg); }
+  .booking__details--close .section-popup {
+    visibility: visible;
+    scale: 1;
+    opacity: 1; }
 
 .navigation__checkbox {
   display: none; }

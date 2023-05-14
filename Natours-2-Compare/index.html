@@ -50,7 +50,7 @@
             </div>
 
             <div class="header__text--btn-btn">
-                <a href="#" class="btn btn--white btn--animated">Discover our tours</a>
+                <a href="#popup" class="btn btn--white btn--animated">Discover our tours</a>
             </div>   
         </div>
 
@@ -98,7 +98,7 @@
 
         </section>
         
-        <section class="section-features">
+        <section class="section-features mar-b-m">
             <div class="row hor-pad-m">
                 <div class="col-1-of-4">
                     <div class="feature-box">
@@ -139,7 +139,7 @@
             </div>
         </section>
 
-        <section class="section-tours">
+        <section class="section-tours" id="section-tours">
             <div class="heading-secondary mar-b-m u-center-text counter-skewY">
                 Most Popular tours
             </div>
@@ -172,7 +172,7 @@
                                     <p class="card__price-only">only</p>
                                     <p class="card__price-value">$297</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book now!</a>
+                                <a href="#popup" class="btn btn--white">Book now!</a>
                             </div>
                         </div>
                     </div>
@@ -205,7 +205,7 @@
                                     <p class="card__price-only">only</p>
                                     <p class="card__price-value">$497</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book now!</a>
+                                <a href="#popup" class="btn btn--white">Book now!</a>
                             </div>
                         </div>
                     </div>
@@ -238,7 +238,7 @@
                                     <p class="card__price-only">only</p>
                                     <p class="card__price-value">$897</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book now!</a>
+                                <a href="#popup" class="btn btn--white">Book now!</a>
                             </div>
                             </div>
                         </div>
@@ -250,6 +250,7 @@
                 </div>
 
         </section>
+
 
         <section class="section-story">
             <div class="bg-video">
@@ -366,7 +367,7 @@
                                 </div>
 
                                 <div class="form__group--btn">
-                                    <button href="#" class="btn btn--green btn-round btn-general mar-t-m">Next Step &rarr;</button>
+                                    <button href="#popup" class="btn btn--green btn-round btn-general mar-t-m">Next Step &rarr;</button>
                                 </div>
                             </div>
                         </form>
@@ -405,6 +406,65 @@
             </div>
         </div>
     </footer>
+
+    <!--cards popup-->
+
+    <section class="section-popup" id="popup">
+        <div class="popup__content">
+                
+            <div class="popup__content--images">
+
+                <div class="popup__content--images-img1" alt="Row Boat">
+
+                </div>
+
+                <div class="popup__content--images-img2" alt="Mountain-top View">
+
+                </div>
+                
+            </div>
+
+            <div class="popup__content--text">
+
+                <a href="#section-tours" class="popup__content--close icon-basic-x">&times;</a>
+
+                <input type="checkbox" id="popup__checkbox" class="popup__content--checkbox">
+
+                <div class="heading-secondary mar-b-s">Start Booking now</div>
+            
+                <div class="heading-tertiary mar-b-s">Important: Terms and Conditions</div>
+                
+                <div class="popup__content--p mar-b-m">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil repellendus dolore harum quas! Sed aliquid ullam tempora, eos corrupti eveniet dolor aspernatur dolorum provident laboriosam esse dolorem porro suscipit culpa? Quas quis, possimus, ipsa, velit hic rerum impedit mollitia sunt repellendus dolore harum quas! Sed aliquid ullam tempora recusandae deleniti cumque? Molestiae id dicta facilis asperiores incidunt illum iure vel tempore, quod amet aspernatur voluptatibus veniam velit repellendus quo. Illo, sequi enim eos perferendis iure est odit iusto quaerat sint repudiandae quos esse? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam beatae incidunt laboriosam mollitia culpa amet commodi assumenda architecto atque sit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, eaque.
+                </div>
+
+                <a class="btn btn--green btn-general" href="#details">Book Now</a>
+            
+            </div>
+
+        </div>
+    </section>
+
+    <section class="booking__details" id="details">
+
+        <div class="booking__details--container">
+
+                <a href="#popup" class="booking__details--close">
+                    &times;
+                </a>
+            
+            <form action="#" method="post" class="booking__details--form">
+                <fieldset>
+                    <legend>Form</legend>
+                    <input type="text">
+                    <input type="text">
+                    <input type="email" name="" id="">
+                    <input type="number" name="" id="">
+                    <input type="tel" name="" id="">
+                </fieldset>
+            </form>
+        </div>
+    </section>
 
 </body>
 

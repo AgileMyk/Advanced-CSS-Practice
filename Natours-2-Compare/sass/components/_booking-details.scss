@@ -1,0 +1,63 @@
+.booking__details {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    border: 2px solid silver;
+    background: rgba($dark-gray-1, .8);
+    transform: scale(0);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    &:target {
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1);
+        z-index: 3000;
+    }
+
+    &--container {
+        border: 3px solid black;
+        margin: 10rem 15rem;
+        border-radius: .75rem;
+
+        position: relative;
+    }
+
+    &--form {
+        padding: 5rem 2.5rem;
+    }
+
+    &--close {
+
+        &,
+        &:link,
+        &:visited {
+            display: inline-block;
+            font-size: 3rem;
+            color: $dark-gray-3;
+
+            position: absolute;
+            top: .5rem;
+            right: 2rem;
+
+            transition: .5s;
+
+            &:hover {
+                color: $primary-color;
+                transform: scale(1.35);
+                transform: rotate(90deg);
+            }
+            
+        }
+
+        & .section-popup {
+            visibility: visible;
+            scale: (1);
+            opacity: 1;
+        }
+    }
+}
