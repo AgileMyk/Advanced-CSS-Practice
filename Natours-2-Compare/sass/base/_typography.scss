@@ -1,5 +1,41 @@
 //about section
 
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+
+    @include respond(tab-port) {
+        font-size: 4rem;
+    }
+
+    &--main {
+        font-size: 5rem;
+        letter-spacing: 1.85rem;
+        font-weight: 700;
+        animation: headerFromLeft 1.75s ease-in .25s forwards;
+
+        @include respond(tab-port) {
+            letter-spacing: 1.175rem;
+
+        }
+    }
+
+    &--sub {
+        font-size: 1.75rem;
+        letter-spacing: 1rem;
+        font-weight: 400;
+        animation: headerFromRight 1.75s ease-in-out .25s forwards;
+
+        @include respond(tab-port) {
+            letter-spacing: 1.15rem;
+
+        }
+    
+    }
+
+
+}
+
 .heading-secondary {
     font-weight: 700;
     font-size: 3rem;
@@ -15,6 +51,16 @@
     &:hover {
         background-image: linear-gradient(to left, $primary-color-light, $primary-color-dark);
         transform: skewY(2deg) skewX(9deg) scale(1.1);
+    }
+
+    @include respond(tab-port) {
+        letter-spacing: .5px;
+        font-size: 2.25rem;
+    }
+
+    @include respond(tab-port) {
+        letter-spacing: .25px;
+        font-size: 2rem;
     }
 }
 

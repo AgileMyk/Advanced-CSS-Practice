@@ -8,16 +8,50 @@
 
 
 html {
-    // this defines 1rem => 10px calc from the typical web browser of 16px auto value
-    font-size: 62.5%
-}
+    // this defines 1rem => 10px / 16px default = 62.5%
+    font-size: 62.5%;
+
+
+        @include respond(big) {
+            font-size: 75%; //1rem = 12px
+            padding: 2%;
+        }
+
+        @include respond(tab-port) {
+            font-size: .5625%; //1rem = 9px
+            padding: 0;
+
+            
+        }
+
+        @include respond(tab-land) {
+            font-size: 50%; //1rem = 8px
+
+          
+            }
+
+
+        @include respond(phone) {
+            font-size: 50%; //1rem = 8px
+        }
+
+        @include respond(extra) {
+            font-size: 77.5%; //1rem = 12.5px
+            padding: 2%;
+
+
+        }
+
+    }
+
+
+
 
 
 body {
     font-family: 'Lato', Arial, Helvetica, sans-serif;
     font-weight: 400;
     line-height: 1.7;
-    padding: 3rem;
     box-sizing: border-box;
 
 }

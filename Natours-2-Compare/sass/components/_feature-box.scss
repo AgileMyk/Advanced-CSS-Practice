@@ -4,6 +4,7 @@
     background-color: rgba($white, .8);
     min-height: 35rem;
     max-width: 24rem;
+    min-width: 17rem;
     font-size: 1.25rem;
     padding: 2.5rem;
     text-align: center;
@@ -22,10 +23,6 @@
         color: transparent;
         background-image: linear-gradient(to right, $primary-color-light, $primary-color-dark);
     
-    }
-
-    &__text {
-
     }
 
     &:hover {

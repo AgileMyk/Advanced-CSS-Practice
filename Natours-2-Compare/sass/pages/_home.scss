@@ -9,8 +9,15 @@
     background-position: top;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
     -moz-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
     position: relative;
+
+
+    margin-bottom: -25rem;
+
+    @include respond(tab-land) {
+        margin-bottom: -36rem;
+    }
 
     &__logo-box {
         position: absolute;
@@ -30,6 +37,7 @@
         top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
+
     }
 
     &__text--btn-btn {
@@ -37,27 +45,6 @@
     }
 }
 
-
-.heading-primary {
-    color: #fff;
-    text-transform: uppercase;
-
-    &--main {
-        font-size: 5rem;
-        letter-spacing: 1.85rem;
-        font-weight: 700;
-        animation: headerFromLeft 1.75s ease-in .25s forwards;
-    }
-
-    &--sub {
-        font-size: 1.75rem;
-        letter-spacing: 1rem;
-        font-weight: 400;
-        animation: headerFromRight 1.75s ease-in-out .25s forwards;
-    
-    }
-
-}
 
 span {
     display: block;
@@ -67,15 +54,15 @@ span {
 
 .section-about  {
     background-color: $light-gray-1;
-    padding: 20rem 15rem;
-    margin-top: -20vh;
+    padding: 30rem 20rem;
     
+ 
 }
 
 .row {
     display: flex;
     gap: 3rem;
-
+    justify-content: center;
 }
 
 .col-1-of-2 {
@@ -93,6 +80,30 @@ span {
 .col-1-of-4 {
     margin: 2rem;
 }
+
+[class^='col-1'] {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+
+    @include respond(phone) {
+        margin: 0 3vw;
+        width: 100%;
+    }
+}
+
+[class^='row'] {
+    display: flex;
+    justify-content: center;
+}
+
+[class^='row'] {
+    @include respond(tab-land) {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
 
 .section-features {
     padding: 20rem 0;
@@ -138,13 +149,8 @@ span {
     }
 
     & .row {
-        gap: 6rem;
+        gap: 4rem;
     } 
-
-}
-
-.col-1-of-3 {
-    width: 27%;
 
 }
 

@@ -83,6 +83,10 @@
                 transform: scale(2.35);
                 transform: rotate(90deg);
             }
+
+            &:active {
+                transform: scale(1);
+            }
         }
     }
 

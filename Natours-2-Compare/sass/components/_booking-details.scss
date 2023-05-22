@@ -36,7 +36,6 @@
         &,
         &:link,
         &:visited {
-            display: inline-block;
             font-size: 3rem;
             color: $dark-gray-3;
 
@@ -49,7 +48,7 @@
             &:hover {
                 color: $primary-color;
                 transform: scale(1.35);
-                transform: rotate(90deg);
+                transform: rotate(45deg);
             }
             
         }
