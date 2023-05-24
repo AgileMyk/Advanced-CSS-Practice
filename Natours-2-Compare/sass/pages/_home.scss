@@ -67,11 +67,13 @@ span {
 
 .col-1-of-2 {
     width: 50%;
+    position: relative;
+    
 }
 
 .col-2-of-2 {
     width: 50%;
-    
+    position: relative;
 }
 
 
@@ -97,7 +99,7 @@ span {
     justify-content: center;
 }
 
-[class^='row'] {
+[class^='row']:not(:last-of-type) {
     @include respond(tab-land) {
         flex-wrap: wrap;
         justify-content: center;

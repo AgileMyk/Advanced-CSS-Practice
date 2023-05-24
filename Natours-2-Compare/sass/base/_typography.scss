@@ -27,7 +27,7 @@
         animation: headerFromRight 1.75s ease-in-out .25s forwards;
 
         @include respond(tab-port) {
-            letter-spacing: 1.15rem;
+            letter-spacing: .8rem;
 
         }
     
