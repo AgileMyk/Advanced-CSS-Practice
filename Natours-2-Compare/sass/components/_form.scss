@@ -23,6 +23,28 @@
             &:not(:first-child) {
                 padding-top: 1.5rem;
             }
+
+        @include respond(tab-port) {
+            display: block;
+        }
+            
+        }
+
+        @include respond(tab-land) {
+            width: 125%;
+            margin-bottom: -2rem;
+        }
+
+        &--btn {
+            @include respond(phone) {
+                padding: 0;
+            }
+
+            & .btn {
+                @include respond(phone) {
+                    margin-top: 0;
+                }
+            }
         }
 
         
@@ -50,6 +72,12 @@
                 &:last-of-type {
                     margin-left: 1.5rem;
                 }
+            }
+
+            @include respond(tab-port) {
+                width: 130%;
+                margin-top: .5rem;
+                
             }
 
             &-label {

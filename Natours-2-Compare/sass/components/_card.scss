@@ -1,7 +1,7 @@
 .card {
 
     //FUNCTIONALITY
-    width: 22rem;
+    min-width: 22rem;
     height: 40rem;
     transition: 1s;
     
@@ -9,6 +9,9 @@
     -moz-perspective: 150rem;
     position: relative;
 
+    @include respond(tab-port) {
+        width: 30rem;
+    }
 
     &__side {
         height: 100%;
@@ -23,18 +26,25 @@
 
         border-radius: 3px;
         overflow: hidden;
-        box-shadow: 0 1.5rem 4rem rgba($shadow-black, .15);
 
         transition: 1s ease;
         backface-visibility: hidden;
 
+        box-shadow: 0 1.75rem 4.5rem rgba($shadow-black, .15);
+
+
         &--front {
             background-color: $white;
-     
+            
         }
 
         &--back {
             transform: rotateY(180deg);
+
+            @include respond(tab-port) {
+                
+                margin-top: -1.95rem;
+            }
             
             &-1 {
                 background-image: linear-gradient(to bottom right, 
@@ -58,12 +68,13 @@
 
     }
 
+
     &:hover &__side--front {
         transform: rotateY(180deg);
     }
 
     &:hover &__side--back {
-        transform: rotateY(360deg);
+        transform: rotateY(0deg);
     }
 
     //FRONT SIDE STYLING
@@ -188,5 +199,470 @@
         font-weight: 100;
     }
 
+    @include respond(tab-port) {
 
+        width: 22rem;
+        transition: 1s;
+        
+        perspective: 150rem;
+        -moz-perspective: 150rem;
+        position: relative;
+
+
+    &__side {
+        height: 100%;
+
+        color: $white;
+        font-size: 3rem;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        border-radius: 3px;
+        overflow: hidden;
+
+
+        transition: 1s ease;
+        backface-visibility: hidden;
+
+
+        &--front {
+            background-color: $white;
+     
+        }
+
+        &--back {
+            transform: rotateY(180deg);
+            
+            &-1 {
+                background-image: linear-gradient(to bottom right, 
+                                    $color-secondary-light, 
+                                    $color-secondary-dark);
+            }
+
+            &-2 {
+                background-image: linear-gradient(to bottom right,
+                                    $primary-color-light, 
+                                    $primary-color-dark);
+                }
+
+            &-3 {
+                background-image: linear-gradient(to bottom right,
+                                    $color-tertiary-light, 
+                                    $color-tertiary-dark);
+                }
+
+        }
+
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(0deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+
+    //FRONT SIDE STYLING
+    &__picture {
+
+        height: 23rem;
+        background-size: cover;
+        background-blend-mode: screen;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        -moz-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        
+
+        &--1 {
+            background-image: linear-gradient(to bottom right,
+                                $color-secondary-light, 
+                                $color-secondary-dark),
+                                url(../img/nat-5.jpg);
+        }
+    
+        &--2 {
+            background-image: linear-gradient(to bottom right,
+                                $primary-color-light, 
+                                $primary-color-dark),
+                                url(../img/nat-6.jpg);
+
+        }
+     
+        &--3 {
+            background-image: linear-gradient(to bottom right,
+                                $color-tertiary-light, 
+                                $color-tertiary-dark),
+                                url(../img/nat-7.jpg);
+
+        }
+    }
+    
+    &__heading {
+
+        text-transform: uppercase;
+        font-size: 2.25rem;
+        font-weight: 300;
+        color: $white;
+        position: absolute;
+        top: 37.5%;
+        left: 20%;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        width: 65%;
+        text-align: right;
+
+
+    }
+ 
+    &__heading-span {
+
+
+        &--1 {
+            background-image: linear-gradient(to bottom right,
+             rgba($color-secondary-light,.85), 
+             rgba($color-secondary-dark, .85));
+        }
+
+        &--2 {
+            background-image: linear-gradient(to bottom right,
+             rgba($primary-color-light, .85), 
+             rgba($primary-color-dark, .85));
+            width: 120%;
+        }
+
+        &--3 {
+            background-image: linear-gradient(to bottom right,
+             rgba($color-tertiary-light, .85), 
+             rgba($color-tertiary-light, .85));
+             width: 119%;
+
+        }
+
+    }
+
+    &__details {
+
+        ul {
+            list-style: none;
+            width: 70%;
+            margin: 0 auto;
+
+            li {
+                text-align: center;
+                font-size: 1.25rem;
+                padding: 1rem;
+                padding-bottom: 8%;
+                color: $gray-style-1;
+                border-bottom: 1px solid $gray-style-1;
+                }
+
+            }
+
+        }
+
+        //BACKSIDE STYLING
+
+    &__cta {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+
+        & .btn {
+            @include respond(tab-port) {
+                transform: translate(-50%, -50%);
+                top: 50%;
+                left: 50%;
+            }
+        }
+    }
+
+    &__price-box {
+        text-align: center;
+        margin-bottom: 8rem;
+    }
+
+    &__price-only {
+        font-size: 2.4rem;
+        text-transform: uppercase;
+    }
+
+    &__price-value {
+        font-size: 6rem;
+        font-weight: 100;
+    }
+
+    }
+
+    //900px card change
+
+    @include respond(tab-port) {
+
+        height: auto;
+ 
+
+        &__side {
+            height: auto;
+
+            color: $white;
+            font-size: 3rem;
+
+            position: relative;
+            width: 100%;
+
+            border-radius: 3px;
+            overflow: hidden;
+
+            &--back {
+                transform: rotateY(180deg);
+                -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+                -moz-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+                clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+            }
+
+        }
+
+        &:hover &__side--front {
+            transform: rotateY(0);
+        }
+
+        &:hover &__side--back {
+            transform: rotateY(0);
+        }
+
+        //FRONT SIDE STYLING
+        &__picture {
+
+            height: 23rem;
+            background-size: cover;
+            background-blend-mode: screen;
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            -moz-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            
+
+            &--1 {
+                background-image: linear-gradient(to bottom right,
+                                    $color-secondary-light, 
+                                    $color-secondary-dark),
+                                    url(../img/nat-5.jpg);
+            }
+        
+            &--2 {
+                background-image: linear-gradient(to bottom right,
+                                    $primary-color-light, 
+                                    $primary-color-dark),
+                                    url(../img/nat-6.jpg);
+
+            }
+        
+            &--3 {
+                background-image: linear-gradient(to bottom right,
+                                    $color-tertiary-light, 
+                                    $color-tertiary-dark),
+                                    url(../img/nat-7.jpg);
+
+            }
+        }
+        
+        &__heading {
+
+            text-transform: uppercase;
+            font-size: 2.25rem;
+            font-weight: 300;
+            color: $white;
+            position: absolute;
+            top: 37.5%;
+            left: 20%;
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+            width: 65%;
+            text-align: right;
+
+
+        }
+    
+        &__heading-span {
+
+
+            &--1 {
+                background-image: linear-gradient(to bottom right,
+                rgba($color-secondary-light,.85), 
+                rgba($color-secondary-dark, .85));
+            }
+
+            &--2 {
+                background-image: linear-gradient(to bottom right,
+                rgba($primary-color-light, .85), 
+                rgba($primary-color-dark, .85));
+                width: 120%;
+            }
+
+            &--3 {
+                background-image: linear-gradient(to bottom right,
+                rgba($color-tertiary-light, .85), 
+                rgba($color-tertiary-light, .85));
+                width: 119%;
+
+            }
+
+        }
+
+        &__details {
+
+            ul {
+                list-style: none;
+                width: 70%;
+                margin: 0 auto;
+
+                @include respond(tab-port) {
+                    margin-bottom: 10rem;
+                }
+
+
+                li {
+                    text-align: center;
+                    font-size: 1.25rem;
+                    padding: 1rem;
+                    padding-bottom: 8%;
+                    color: $gray-style-1;
+                    border-bottom: 1px solid $gray-style-1;
+
+                    @include respond(tab-port) {
+                        font-size: 1.1rem;
+                        padding: .5rem;
+                        padding-bottom: 2%;
+                        width: 75%;
+                        margin: 0 auto;
+                                        }
+
+                    }
+
+                    &:last-of-type {
+                        margin-bottom: 1rem;
+                    }
+
+                }
+
+            }
+
+            //BACKSIDE STYLING
+
+        &__cta {
+            width: 100%;
+            position: relative;
+            transform: translate(0);
+            top: 0;
+            left: 0;
+        }
+
+        &__price-box {
+            margin-bottom: 8rem;
+        }
+
+
+        &__price-value {
+            font-size: 6rem;
+        }
+
+        @include respond(tab-port) {
+        width: 22rem;
+        transition: 1s;
+        
+        perspective: 150rem;
+        -moz-perspective: 150rem;
+        position: relative;
+
+
+        &__side {
+            height: 100%;
+
+            color: $white;
+            font-size: 3rem;
+
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+            border-radius: 3px;
+            overflow: hidden;
+
+            transition: 1s ease;
+            backface-visibility: hidden;
+
+            @include respond(tab-port) {
+                border-radius: 0;
+            }
+
+            &--front {
+                height: 40rem;
+
+            }
+
+            &--back {
+                transform: rotateY(0);
+                height: 20rem;
+                
+                &-1 {
+                    background-image: linear-gradient(to bottom right, 
+                                        $color-secondary-light, 
+                                        $color-secondary-dark);
+                }
+
+                &-2 {
+                    background-image: linear-gradient(to bottom right,
+                                        $primary-color-light, 
+                                        $primary-color-dark);
+                    }
+
+                &-3 {
+                    background-image: linear-gradient(to bottom right,
+                                        $color-tertiary-light, 
+                                        $color-tertiary-dark);
+                    }
+
+            }
+
+        }
+
+        &:hover &__side--front {
+            transform: rotateY(0);
+        }
+
+        &:hover &__side--back {
+            transform: rotateY(0);
+        }
+
+      
+            //BACKSIDE STYLING
+
+        &__cta {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+        }
+
+        &__price-box {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        &__price-only {
+            font-size: 2.4rem;
+            text-transform: uppercase;
+        }
+
+        &__price-value {
+            font-size: 4rem;
+            font-weight: 100;
+        }
+
+        }
+    }
 }

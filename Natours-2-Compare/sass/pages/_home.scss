@@ -54,15 +54,46 @@ span {
 
 .section-about  {
     background-color: $light-gray-1;
-    padding: 30rem 20rem;
+    padding: 35rem 20rem 20rem;
     
- 
+    @include respond(phone) {
+        padding-right: 5rem;
+        padding-left: 5rem;
+    }
+    
+    & > .row {
+        @include respond(tab-land) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        & > [class^="col-"] {
+            width: 75%;
+        }
+    }
+
+    @include respond(tab-land) {
+        position: relative;
+        padding-top: 7.5rem;
+        padding-bottom: 20vw;
+    }
+
+}
+
+.image-container {
+    height: 100%;
+
 }
 
 .row {
     display: flex;
     gap: 3rem;
     justify-content: center;
+
+    @include respond(phone) {
+        padding-right: 0rem;
+        padding-left: 0rem;    }
 }
 
 .col-1-of-2 {
@@ -84,30 +115,23 @@ span {
 }
 
 [class^='col-1'] {
-    flex-wrap: wrap;
+
     display: flex;
     justify-content: center;
 
-    @include respond(phone) {
-        margin: 0 3vw;
-        width: 100%;
-    }
 }
 
-[class^='row'] {
-    display: flex;
-    justify-content: center;
-}
 
 [class^='row']:not(:last-of-type) {
     @include respond(tab-land) {
-        flex-wrap: wrap;
         justify-content: center;
     }
 }
 
 
 .section-features {
+
+
     padding: 20rem 0;
     margin-top: -6rem;
     background-image: linear-gradient(
@@ -121,6 +145,10 @@ span {
 
     & > * {
         transform: skewY(5deg);
+    }
+
+    & .row {
+        flex-wrap: wrap;
     }
 
 }
@@ -152,7 +180,24 @@ span {
 
     & .row {
         gap: 4rem;
-    } 
+        flex-wrap: wrap;
+
+    }
+
+    & > .row {
+        @include respond(tab-port) {
+            display: block;
+
+            & >* {
+                width: 100%;
+                margin-bottom: 10rem;
+
+                & >* {
+                    width: 45%;
+                }
+            }
+        }
+    }
 
 }
 
@@ -180,17 +225,27 @@ span {
     width: 87.5%;
     margin: 0 auto;
     background-image: linear-gradient(102.5deg,
-                      rgba($white, .8) 45%,
-                      rgba($white, .0) 45.1%), 
+                      rgba($white, .8) 35%,
+                      rgba($white, .0) 35.1%), 
                       url(/img/nat-10.jpg);
     background-repeat: no-repeat;
-    background-size: 116%;
+    background-size: 126%;
     border-radius: 3px;
     box-shadow: 0 3rem 6rem rgba($shadow-black, .3);
     object-fit: contain;
 
     height: 50rem;
     padding: 5rem 7.5rem 0;
+
+    @include respond(tab-land) {
+        background-image: linear-gradient(102.5deg,
+                      rgba($white, .8) 43%,
+                      rgba($white, .0) 43.1%), 
+                      url(/img/nat-10.jpg);
+        background-size: 176%;
+              
+    }
+
 
 }
 

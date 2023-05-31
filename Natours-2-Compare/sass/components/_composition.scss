@@ -1,6 +1,7 @@
 
 .composition {
 
+    height: 15rem;
     margin-top: 1.5rem;
     position: relative;
 
@@ -21,22 +22,37 @@
         }
 
         &--p1 {
-            top: 10%;
-            left: 55%;
+            top: -7.5%;
+            left: 50%;
             z-index: 2;
+
+            @include respond(tab-land) {
+                top: 0;
+            }
         }
 
         &--p2 {
             
             top: 20%;
-            left: 30%;
+            left: -15%;
             z-index: 3;
+
+            @include respond(tab-land) {
+                top: 0;
+                left: 5%;
+            }
         }
 
         &--p3 {
             top: -30%;
-            left: 15%;   
+            left: 17.5%;   
             z-index: 3;
+
+            @include respond(tab-land) {
+                top: 0;
+                left: 27.5%;
+                transform: scale(1.1);
+            }
         }
 
     }
