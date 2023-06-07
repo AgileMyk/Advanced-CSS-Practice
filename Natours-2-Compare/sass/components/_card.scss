@@ -86,13 +86,15 @@
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
         -moz-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-        
+
 
         &--1 {
-            background-image: linear-gradient(to bottom right,
-                                $color-secondary-light, 
-                                $color-secondary-dark),
+            background-image: linear-gradient(
+                                to bottom right,
+                                ($color-secondary-light), 
+                                ($color-secondary-dark)),
                                 url(../img/nat-5.jpg);
+             
         }
     
         &--2 {
@@ -134,8 +136,14 @@
 
         &--1 {
             background-image: linear-gradient(to bottom right,
-             rgba($color-secondary-light,.85), 
+             rgba($color-secondary-light,.75), 
              rgba($color-secondary-dark, .85));
+
+             @include respond(extra) {
+                background-image: linear-gradient(to bottom right,
+             rgba($color-secondary-light,.75), 
+             rgba($color-secondary-dark, .99));
+             }
         }
 
         &--2 {
@@ -143,6 +151,12 @@
              rgba($primary-color-light, .85), 
              rgba($primary-color-dark, .85));
             width: 120%;
+
+            @include respond(extra) {
+                background-image: linear-gradient(to bottom right,
+             rgba($primary-color-light,.75), 
+             rgba($primary-color-dark, .99));
+             }
         }
 
         &--3 {
@@ -150,6 +164,12 @@
              rgba($color-tertiary-light, .85), 
              rgba($color-tertiary-light, .85));
              width: 119%;
+
+             @include respond(extra) {
+                background-image: linear-gradient(to bottom right,
+             rgba($color-tertiary-light,.75), 
+             rgba($color-tertiary-dark, .99));
+             }
 
         }
 
@@ -450,6 +470,7 @@
                                     $color-secondary-light, 
                                     $color-secondary-dark),
                                     url(../img/nat-5.jpg);
+                  
             }
         
             &--2 {

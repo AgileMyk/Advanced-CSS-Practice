@@ -84,9 +84,22 @@
                     <div class="image__container">
                         &nbsp;
                         <div class="composition">
-                            <img src="img/nat-1-large.jpg" alt="photo 1" class="composition__photo composition__photo--p1"></img>
-                            <img src="img/nat-2-large.jpg" alt="photo 2" class="composition__photo composition__photo--p2"></img>
-                            <img src="img/nat-3-large.jpg" alt="photo 3" class="composition__photo composition__photo--p3"></img>
+
+                            <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                                sizes="(max-width: 900) 29vw (max-width:600) 26vw 390px"
+                                alt="Photo 1"
+                                class="composition__photo composition__photo--p1"
+                                src="img/nat-1-large.jpg">
+                            <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                                sizes="(max-width: 900) 29vw (max-width:600) 26vw 390px"
+                                alt="Photo 2"
+                                class="composition__photo composition__photo--p2"
+                                src="img/nat-2-large.jpg">
+                            <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                                sizes="(max-width: 900) 29vw (max-width:600) 26vw 390px"
+                                alt="Photo 3"
+                                class="composition__photo composition__photo--p3"
+                                src="img/nat-3-large.jpg">
                         </div>
 
                     </div>
@@ -268,7 +281,13 @@
                     <div class="story">
 
                         <figure class="story__shape">
-                            <img src="/img/nat-8.jpg" class="story__image" alt="person in a row boat">
+
+                            <img srcset="img/nat-8.jpg 300w"
+                                sizes="(max-width: 1200) 22.5vw (max-width:900) 20vw 270px"
+                                alt="person in a row boat"
+                                class="story__image"
+                                src="img/nat-8.jpg"> 
+
                             <figcaption class="story__name">
                                 Mary Smith
                             </figcaption>
@@ -288,7 +307,13 @@
                     <div class="story">
 
                         <figure class="story__shape">
-                            <img src="/img/nat-9.jpg" class="story__image" alt="person overlooking mountain">
+
+                            <img srcset="img/nat-9.jpg 300w"
+                                sizes="(max-width: 1200) 22.5vw (max-width:900) 20vw 270px"
+                                alt="person overlooking mountain"
+                                class="story__image"
+                                src="img/nat-9.jpg">
+
                             <figcaption class="story__name">
                                 Jack Wilson
                             </figcaption>
@@ -381,7 +406,14 @@
 
     <footer class="footer">
         <div class="footer__logo-box">
-            <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo">
+
+            <picture class="footer__logo">
+                <source srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" 
+                media="(max-width: 37.5em)">
+                <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo" class="footer__logo"
+                src="img/logo-green-2x.png 2x">
+            </picture>
+
         </div>
 
         <div class="row">

@@ -4,7 +4,7 @@
         to right bottom, 
         rgba($primary-color-light, .8), 
         rgba($primary-color-dark, .7)), 
-        url(../img/hero.jpg);
+        url(../img/hero-small.jpg);
     background-size: cover;
     background-position: top;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
@@ -12,8 +12,16 @@
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
     position: relative;
 
-
     margin-bottom: -25rem;
+
+    @media (min-resolution: 192dpi) and (min-width: 37.5625em), 
+           (min-width: 125em) {
+                background-image: linear-gradient(
+                to right bottom, 
+                rgba($primary-color-light, 1), 
+                rgba($primary-color-dark, .8)), 
+                url(../img/hero.jpg);
+    }
 
     @include respond(tab-land) {
         margin-bottom: -36rem;
@@ -62,7 +70,7 @@ span {
     }
     
     & > .row {
-        @include respond(tab-land) {
+        @include respond(tab-port) {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -108,7 +116,7 @@ span {
 }
 
 
-//adjsut icon wolrd size in features section
+//adjsut icon world size in features section
 
 .col-1-of-4 {
     margin: 2rem;
@@ -140,6 +148,7 @@ span {
         rgba($primary-color-dark, .7)), 
         url(../img/nat-4.jpg);
     background-size: cover;
+
 
     transform: skewY(-5deg);
 
@@ -225,8 +234,8 @@ span {
     width: 87.5%;
     margin: 0 auto;
     background-image: linear-gradient(102.5deg,
-                      rgba($white, .8) 35%,
-                      rgba($white, .0) 35.1%), 
+                      rgba($white, .8) 45%,
+                      rgba($white, .0) 45.1%), 
                       url(/img/nat-10.jpg);
     background-repeat: no-repeat;
     background-size: 126%;
@@ -237,12 +246,26 @@ span {
     height: 50rem;
     padding: 5rem 7.5rem 0;
 
+    @include respond(phone) {
+        padding: 0rem 2rem;
+        height: 45rem;
+    }
+
     @include respond(tab-land) {
         background-image: linear-gradient(102.5deg,
-                      rgba($white, .8) 43%,
-                      rgba($white, .0) 43.1%), 
+                      rgba($white, .8) 41%,
+                      rgba($white, .0) 41.1%), 
                       url(/img/nat-10.jpg);
         background-size: 176%;
+              
+    }
+
+    @include respond(phone) {
+        background-image: linear-gradient(102.5deg,
+                      rgba($white, .8) 99.8%,
+                      rgba($white, .0) 99.9%), 
+                      url(/img/nat-10.jpg);
+        background-size: cover;
               
     }
 

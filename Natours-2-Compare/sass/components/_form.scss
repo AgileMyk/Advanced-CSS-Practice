@@ -9,6 +9,8 @@
         display: block;
     }
 
+    
+
 
     &__group {
         margin: 0 auto;
@@ -31,11 +33,12 @@
         }
 
         @include respond(tab-land) {
-            width: 125%;
+            width: 135%;
             margin-bottom: -2rem;
         }
 
         &--btn {
+
             @include respond(phone) {
                 padding: 0;
             }
@@ -47,7 +50,7 @@
             }
         }
 
-        
+
         &--sizes {
 
             &-legend {
@@ -61,6 +64,7 @@
 
         &--radio {
             display: flex;
+            width: 125%;
 
             padding: 1rem 1rem 1rem 0;
             margin: 2.5rem .95rem 0;
@@ -74,9 +78,21 @@
                 }
             }
 
+            @include respond(tab-land) {
+                margin-bottom: 4rem;
+                width: 80%;
+            }
+
             @include respond(tab-port) {
-                width: 130%;
-                margin-top: .5rem;
+                width: 105%;
+                margin-top: 1.5rem;
+                margin-bottom: 1rem;
+                
+            }
+
+            @include respond(phone) {
+                width: 190%;
+                margin: 2rem 0 1.5rem;
                 
             }
 

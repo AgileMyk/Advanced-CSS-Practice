@@ -77,6 +77,12 @@
         background-color: $primary-color;
         color: $white;
 
+        &:last-of-type {
+            @include respond(tab-land) {
+                margin-top: 0;
+            }
+        }
+
         &::after {
             background-color: $primary-color;
         }
@@ -113,11 +119,11 @@
     color: $primary-color-dark;
     border-bottom: 1.5px solid $primary-color-dark;
 
-    @include respond(tab-land) {
-        position: absolute;
-        bottom: 5rem;
+        @include respond(tab-land) {
+            position: absolute;
+            bottom: 5rem;
 
-    }
+        }
     }
 
     &:hover {

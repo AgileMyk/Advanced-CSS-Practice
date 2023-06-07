@@ -6,13 +6,21 @@
     left: 0;
     z-index: 3000;
 
-    background: rgba($shadow-black, .85);
+    background: rgba($shadow-black, .15);
     padding: 12.5vh 8vw;
 
     opacity: 0;
     visibility: hidden;
     transform: scale(0);
     transition: .2s;
+
+    backdrop-filter: blur(10px);
+
+    @include respond(phone) {
+        padding: 0;
+        height: 50vh;
+        margin-top: 15vh;
+    }
 
 
     &:target {
@@ -24,33 +32,68 @@
 }
 
 .popup__content {
+    position: relative;
     background-color: $white;
     max-width: 120rem;
     margin: 0 auto;
     height: 100%;
     min-height: 38rem;
-    box-shadow: 0rem 4rem 4rem rgba($shadow-black, .9);
+    box-shadow: 0rem 4rem 4rem rgba($shadow-black, .3);
     display: flex;
     border-radius: 4px;
     overflow: hidden;
 
+    @include respond(tab-land) {
+        font-size: 1.35rem;
+
+    }
+
 
     &--images {
 
-        width: 24%;
+        width: 30%;
+
+        @include respond(tab-land) {
+            width: 40%;
+        }
+
+        @include respond(tab-port) {
+            width: 45%;
+            background-size: 50%;
+        }
+
+        @include respond(phone) {
+            display: none;
+        }
         
 
         &-img1 {
             background-image: url(/img/nat-8.jpg);
             background-size: cover;
             height: 50%;
-            
+
+            @include respond(tab-port) {
+                position: absolute;
+                top: 0%;
+                left: -25%;
+                width: 55%;
+            }
+
+
+
         }
 
         &-img2 {
             background-image: url(/img/nat-9.jpg);
             background-size: cover;
             height: 50%;
+
+            @include respond(tab-port) {
+                position: absolute;
+                top: 50%;
+                left: -25%;
+                width: 55%;
+            }
 
         }
 
@@ -61,6 +104,16 @@
         width: 66%;
         padding: 5rem 3rem 7rem 10rem;
         position: relative;
+
+
+        @include respond(tab-port) {
+            padding: 5rem 5rem 5rem 0rem;
+        }
+
+        @include respond(phone) {
+            margin: 0 auto;
+            padding: 0;
+        }
     }
 
     &--close {
@@ -70,7 +123,15 @@
         &:visited {
             position: absolute;
             top: 2rem;
-            right: -6rem;
+            right: 2%;
+
+            @include respond(tab-land) {
+                right: 5%;
+            }
+
+            @include respond(tab-port) {
+                right: 6%;
+            }
 
             color: $dark-gray-1;
             font-size: 2.5rem;

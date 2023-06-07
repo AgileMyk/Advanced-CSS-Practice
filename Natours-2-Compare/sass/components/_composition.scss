@@ -22,11 +22,11 @@
         }
 
         &--p1 {
-            top: -7.5%;
-            left: 50%;
+            top: 10%;
+            left: 55%;
             z-index: 2;
 
-            @include respond(tab-land) {
+            @include respond(tab-port) {
                 top: 0;
             }
         }
@@ -34,10 +34,10 @@
         &--p2 {
             
             top: 20%;
-            left: -15%;
+            left: -5%;
             z-index: 3;
 
-            @include respond(tab-land) {
+            @include respond(tab-port) {
                 top: 0;
                 left: 5%;
             }
@@ -48,7 +48,7 @@
             left: 17.5%;   
             z-index: 3;
 
-            @include respond(tab-land) {
+            @include respond(tab-port) {
                 top: 0;
                 left: 27.5%;
                 transform: scale(1.1);
