@@ -105,7 +105,7 @@
         }
 
         @include respond(extra) {
-            top: 9.25%;
+            top: 10%;
             right: 5%;
         }
 
@@ -120,7 +120,7 @@
             right: 7.6rem;
 
             @include respond(extra) {
-                top: 8.25%;
+                top: 9%;
                 right: 5%;
             }
 
@@ -136,7 +136,7 @@
             right: 7.6rem;
 
             @include respond(extra) {
-                top: 10.25%;
+                top: 11%;
                 right: 5%;
             }
 

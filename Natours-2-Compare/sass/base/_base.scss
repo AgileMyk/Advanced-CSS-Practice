@@ -68,5 +68,8 @@ a {
 
 }
 
-
+::selection {
+    background-color: $primary-color;
+    color: $white;
+}
 

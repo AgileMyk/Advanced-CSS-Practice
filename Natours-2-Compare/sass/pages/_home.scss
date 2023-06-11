@@ -14,7 +14,7 @@
 
     margin-bottom: -25rem;
 
-    @media (min-resolution: 192dpi) and (min-width: 37.5625em), 
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5625em), 
            (min-width: 125em) {
                 background-image: linear-gradient(
                 to right bottom, 
@@ -180,7 +180,7 @@ span {
 
 .section-tours {
     padding: 15rem 15rem;
-    margin-top: -20vh;
+    //margin-top: -20vh;
     transform: skewY(-5deg);
 
     & > *:not(:first-child) {
