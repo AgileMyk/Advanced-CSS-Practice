@@ -29,6 +29,11 @@
         @include respond(tab-port) {
             display: block;
         }
+
+
+        @include respond(extra) {
+            width: 110%;
+        }
             
         }
 
@@ -36,6 +41,7 @@
             width: 135%;
             margin-bottom: -2rem;
         }
+
 
         &--btn {
 
@@ -118,12 +124,14 @@
 
         font-family: inherit;
 
+        @include respond(extra) {
+            width: 12vw;
+        }
+
         &:focus {
             outline: none;
             border-bottom: 3px solid $primary-color;
             box-shadow: 0 .75rem 1.5rem rgba($shadow-black, .4);
-
-
         }
 
         &::-webkit-input-placeholder {

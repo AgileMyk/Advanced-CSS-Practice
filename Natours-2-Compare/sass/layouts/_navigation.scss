@@ -22,11 +22,23 @@
         &:checked + .navigation__button .navigation__icon::before {
             top: 5.5rem;
             transform: rotate(135deg) translateX(.75rem) translateY(-.7rem);
+
+
+        @include respond(extra) {
+            top: 8.7%;
+            transform: rotate(135deg) translateX(.75rem) translateY(-.7rem);
+        }
+
         }
 
         &:checked + .navigation__button .navigation__icon::after {
             transform: rotate(-135deg) translateX(.35rem) translateY(.25rem);
             top: 7rem;
+
+            @include respond(extra) {
+                top: 10.35%;
+                transform: rotate(-135deg) translateX(.35rem) translateY(.25rem);
+            }
         }
     }
 
@@ -169,6 +181,10 @@
         right: 6.5rem;
         z-index: 999;
         transition: transform .6s cubic-bezier(0.65, 0, 0.35, 1);
+
+        @include respond(extra) {
+            top: 6.75%;
+        }
 
         background-image: radial-gradient(
                           $primary-color-light,
