@@ -3,26 +3,14 @@
   "version": "1.0.0",
   "description": "site remake for learning/experimentation",
   "main": "index.js",
-  "private": "true",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss css/styles.css -w",
-    "compile:sass": "node-sass sass/main.scss css/styles.comp.css",
-    "concat:css": "concat -o css/styles.concat.css css/icon-font.css css/styles.comp.css",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/styles.concat.css -o css/styles.prefix.css"
+    "compile:sass":"node-sass sass/main.scss css/styles.css -w"
   },
   "author": "m hall",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^10.4.14",
-    "concat": "^1.0.3",
-    "node-sass": "^18.16.0",
-    "postcss-cli": "^10.1.0"
+    "node-sass": "^18.16.0"
   },
-  "browserslist": [
-    "last 10 version",
-    "> 1%",
-    "not dead"
-  ],
   "dependencies": {
     "abbrev": "^1.1.1",
     "agent-base": "^6.0.2",

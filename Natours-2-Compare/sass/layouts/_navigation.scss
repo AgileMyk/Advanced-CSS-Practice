@@ -60,6 +60,11 @@
                 top: 8em;
                 right: 5.5rem;
             }
+
+            @include respond(extra) {
+                top: 9.25%;
+                right: 5%;
+            }
         }
 
         &:hover .navigation__icon::after {
@@ -69,6 +74,11 @@
             @include respond(tab-port) {
                 top: 6.5em;
                 right: 5.5rem;
+            }
+
+            @include respond(extra) {
+                top: 10.75%;
+                right: 5%;
             }
             
         }
@@ -122,6 +132,7 @@
             @include respond(extra) {
                 top: 9%;
                 right: 5%;
+
             }
 
             @include respond(tab-port) {
