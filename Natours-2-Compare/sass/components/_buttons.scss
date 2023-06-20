@@ -113,15 +113,29 @@
 
     display: inline-block;
     padding: 2px;
-    margin-top: 3rem;
+    margin-top: 6rem;
 
     &:link, &:visited {
     color: $primary-color-dark;
     border-bottom: 1.5px solid $primary-color-dark;
 
+
+
+
         @include respond(tab-land) {
             position: absolute;
-            bottom: 5rem;
+            bottom: 12rem;
+
+        }
+
+        @include respond(tab-port) {
+            position: absolute;
+            bottom: 10rem;
+
+        }
+
+        @include respond(phone) {
+            bottom: 9rem;
 
         }
     }

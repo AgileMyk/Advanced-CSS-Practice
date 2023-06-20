@@ -182,6 +182,7 @@
     &__list {
         @include center;
         width: clamp(27ch, 50%, 43ch);
+        transform: translate(200%, -250%);
 
         transition: all .6s;
 
