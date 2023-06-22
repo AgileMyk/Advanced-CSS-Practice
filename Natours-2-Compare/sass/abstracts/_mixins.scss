@@ -60,7 +60,6 @@ breakpoint argument choices:
 
         @if $breakpoint == extra {
             @media only screen and (min-width: 112.51em) { @content }; //1801px+
-
         }
 
         @if ($breakpoint == phone) {

@@ -4,15 +4,14 @@
   "description": "site remake for learning/experimentation",
   "main": "index.js",
   "scripts": {
-    "watch:sass":"node-sass sass/main.scss css/styles.css -w",
-    "compile:sass": "node-sass sass/main.scss css/styles.comp.css"
-    
+    "watch:sass": "sass sass/main.scss css/styles.css -w",
+    "compile:sass": "sass sass/main.scss css/styles.comp.css",
+    "concat:css": "concat -o css/styles.concat.css css/styles.comp.css css/icon-font.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/styles.concat.css -o css/styles.prefix.css",
+    "compress:css": "sass css/styles.prefix.css css/styles.css --output-style compressed"
   },
   "author": "m hall",
   "license": "ISC",
-  "devDependencies": {
-    "node-sass": "^18.16.0"
-  },
   "dependencies": {
     "abbrev": "^1.1.1",
     "agent-base": "^6.0.2",
@@ -36,6 +35,7 @@
     "color-convert": "^2.0.1",
     "color-name": "^1.1.4",
     "color-support": "^1.1.3",
+    "concat": "^1.0.3",
     "concat-map": "^0.0.1",
     "console-control-strings": "^1.1.0",
     "core-util-is": "^1.0.3",
@@ -141,6 +141,7 @@
     "rimraf": "^3.0.2",
     "safe-buffer": "^5.2.1",
     "safer-buffer": "^2.1.2",
+    "sass": "^1.63.4",
     "sass-graph": "^4.0.1",
     "scss-tokenizer": "^0.4.3",
     "semver": "^7.3.8",
@@ -180,5 +181,9 @@
     "yallist": "^4.0.0",
     "yargs": "^17.6.2",
     "yargs-parser": "^20.2.9"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss-cli": "^10.1.0"
   }
 }

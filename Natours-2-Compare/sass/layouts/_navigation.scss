@@ -21,7 +21,7 @@
         
         &:checked + .navigation__button .navigation__icon::before {
             transform: rotate(135deg) translateX(.75rem) translateY(-.7rem);
-            top: -1225%;
+            top: -1125%;
 
             @include respond(tab-land) {
                 top: -750%;
@@ -34,7 +34,7 @@
             top: -2425%;
 
             @include respond(tab-land) {
-                top: -1500%;
+                top: -1525%;
 
             }
         }
