@@ -1,16 +1,18 @@
 
 .container {
-    max-width: 80rem;
-    height: 80vh;
+    max-width: 120rem;
+    min-height: 80vh;
 
     margin: 8rem auto;
-    background-color: var(--grey-light-3);
+    background-color: var(--grey-light-2);
     box-shadow: var(--dark-shadow);
 
 }
 
 .header {
-
+    height: 7rem;
+    background-color: #fff;
+    border-bottom: var(--gray-light-1);
 }
 
 .content {

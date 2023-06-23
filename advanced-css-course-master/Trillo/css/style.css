@@ -19,8 +19,9 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   line-height: 1.6;
+  color: var(--grey-dark-2);
   background-image: linear-gradient(to bottom right, var(--primary-light), var(--primary-dark));
-  background-size: cover; }
+  min-height: 100vh; }
 
 *, *::before, *::after {
   box-sizing: inherit; }
@@ -37,11 +38,16 @@ li, a {
   text-decoration: none; }
 
 .container {
-  max-width: 80rem;
-  height: 80vh;
+  max-width: 120rem;
+  min-height: 80vh;
   margin: 8rem auto;
-  background-color: var(--grey-light-3);
+  background-color: var(--grey-light-2);
   box-shadow: var(--dark-shadow); }
+
+.header {
+  height: 7rem;
+  background-color: #fff;
+  border-bottom: var(--gray-light-1); }
 
 .content {
   background-color: #fff;
