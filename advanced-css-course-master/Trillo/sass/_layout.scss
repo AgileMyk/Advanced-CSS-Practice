@@ -18,9 +18,16 @@
 .content {
     background-color: #fff;
     display: flex;
+    height: 100%;
 }
 
 .sidebar {
     background-color: var(--grey-dark-1);
     flex: 0 0 18%;
+    
+}
+
+.hotel-view {
+    flex: 1;
+    background-color: orangered;
 }
