@@ -17,15 +17,39 @@
             <header class="header">
 
                 <div class="header__logo">
-                    <img src="img/logo.png" alt="trillo logo">
+                    <img src="img/logo.png" alt="trillo logo" class="icon-s__er">
                 </div>
 
                 <form action="#" class="header__search">
 
                     <input type="text" class="header__search--input" placeholder="search hotels">
 
-                    <button class="header__search--button">&nbsp;</button>
+                    <button class="header__search--button">
+                            <svg class="header__search--icon">
+                                <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                            </svg>
+                    </button>
                 </form>
+
+                <nav class="user-nav">
+                    <div class="icon-s user-nav__icon-box">
+                        <svg class="icon-s user-nav__icon">
+                             <use xlink:href="img/sprite.svg#icon-bookmark"></use>
+                        </svg>
+                        <span class="user-nav__notification">7</span>
+                    </div>
+
+                    <div class="icon-s user-nav__icon-box">
+                        <svg class="icon-s user-nav__icon">
+                            <use xlink:href="img/sprite.svg#icon-chat"></use>
+                        </svg>
+                        <span class="user-nav__notification">30</span>
+                    </div>
+                    <div class="icon-s user-nav__icon-box">
+                        <img src="img/user.jpg" alt="user photo" class="user-nav__user-photo">
+                        <span class="user-nav__user-name"></span>
+                    </div>
+                </nav>
 
             </header>
 
@@ -43,6 +67,6 @@
 
         </div> 
     
-    <script src="js/index.js"></script>
+    <!--<script src="js/index.js"></script>-->
     </body>
 </html>

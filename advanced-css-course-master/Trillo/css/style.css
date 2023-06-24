@@ -45,9 +45,24 @@ li, a {
   box-shadow: var(--dark-shadow); }
 
 .header {
-  height: 7rem;
+  height: 6.5rem;
   background-color: #fff;
-  border-bottom: var(--gray-light-1); }
+  border-bottom: var(--grey-light-1);
+  background-color: var(--grey-dark-3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem; }
+  .header__search {
+    display: flex;
+    flex: 1.5;
+    align-items: center;
+    justify-content: flex-end; }
+
+.user-nav {
+  display: flex;
+  flex: 1;
+  justify-content: right; }
 
 .content {
   background-color: #fff;
@@ -55,9 +70,69 @@ li, a {
   height: 100%; }
 
 .sidebar {
-  background-color: var(--grey-dark-1);
-  flex: 0 0 18%; }
+  background-color: var(--grey-dark-1); }
 
 .hotel-view {
-  flex: 1;
+  flex: 1.5;
   background-color: orangered; }
+
+.icon-s {
+  height: 3rem;
+  width: 3rem; }
+  .icon-s__er {
+    height: 2.75rem; }
+
+input:focus::placeholder {
+  color: transparent; }
+
+::-webkit-input-placeholder {
+  color: var(--primary-dark); }
+
+::-moz-placeholder {
+  color: var(--primary-dark); }
+
+::-ms-placeholder {
+  color: var(--primary-dark); }
+
+::placeholder {
+  color: var(--primary-dark); }
+
+.header__search--input {
+  border-radius: 1.5rem;
+  height: 3rem;
+  background: var(--grey-light-2);
+  border: none;
+  margin-right: -4.5rem;
+  width: 50%;
+  font-family: inherit;
+  font-size: 1.375rem;
+  padding: 0 1.25rem;
+  color: var(--grey-dark-1);
+  transition: transform .2s; }
+  .header__search--input:focus {
+    outline: none;
+    border: 1px solid var(--primary-dark);
+    transform: scaleX(125%);
+    height: 3.1rem;
+    background: var(--grey-light-3); }
+
+.header__search--button {
+  display: flex;
+  background-color: transparent;
+  border: none; }
+
+.header__search--icon {
+  height: 2.05rem;
+  width: 2.05rem;
+  fill: var(--grey-dark-3); }
+
+.user-nav {
+  display: flex; }
+  .user-nav__icon-box {
+    display: flex;
+    align-items: center; }
+    .user-nav__icon-box:hover {
+      background: var(--grey-dark-1); }
+  .user-nav__user-photo {
+    height: 3.75rem;
+    border-radius: 50%; }
